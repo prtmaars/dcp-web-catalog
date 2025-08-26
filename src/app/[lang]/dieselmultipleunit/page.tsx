@@ -6,7 +6,7 @@ import { dieselMultipleUnit } from "./dieselmultipleunit";
 import { translations, LangType } from "@/i18n/translations";
 import { useParams } from "next/navigation"; // untuk mengambil [lang]
 
-export default function dieselMultipleUnitPage() {
+export default function DieselMultipleUnitPage() { // <-- Huruf besar di awal
   const params = useParams();
   const lang = (params.lang as LangType) || "id"; // default ID
   const t = translations[lang].dieselmultipleunit;
