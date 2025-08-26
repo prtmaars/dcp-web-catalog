@@ -24,7 +24,9 @@ export const translations = {
       dieselmultipleunit: "KRD",
       objects: "OBJEK",
       tutorial: "PANDUAN",
-      contact: "KONTAK"
+      contact: "KONTAK",
+      menu: "MENU",
+      close: "TUTUP"
     },
     footer: {
       rights: "Hak cipta dilindungi.",
@@ -108,7 +110,9 @@ export const translations = {
       dieselmultipleunit: "DMU",
       objects: "OBJECTS",
       tutorial: "TUTORIAL",
-      contact: "CONTACT"
+      contact: "CONTACT",
+      menu: "MENU",
+      close: "CLOSE"
     },
     footer: {
       rights: "All rights reserved.",
@@ -191,7 +195,9 @@ export const translations = {
       dieselmultipleunit: "디젤 동차",
       objects: "객체",
       tutorial: "튜토리얼",
-      contact: "문의"
+      contact: "문의",
+      menu: "메뉴",
+      close: "닫다"
     },
     footer: {
       rights: "모든 권리를 보유합니다.",

@@ -50,7 +50,7 @@ export default async function HomePage({ params }: { params: { lang: "en" | "id"
       link: "https://drive.google.com/file/u/1/d/0B400oql_9moXTU1pZFZ0SlR6d28/view?usp=drivesdk",
     },
   ];
-
+  
   return (
     <>
       {/* Hero Banner */}
@@ -79,15 +79,17 @@ export default async function HomePage({ params }: { params: { lang: "en" | "id"
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Gallery */}
-        <h2 className="text-2xl font-semibold mt-12 mb-2">{dict.home.gallery}</h2>
+      {/* Gallery */}
+      <div className="max-w-5xl mx-auto px-6">
+        <h2 className="text-2xl font-semibold mt-2 mb-2">{dict.home.gallery}</h2>
         <Gallery images={galleryImages} perPage={6} />
       </div>
 
       {/* Games Section */}
       <div className="max-w-5xl mx-auto px-6 py-0">
-        <h1 className="text-2xl font-bold mb-4">{dict.home.gameTitle}</h1>
+        <h1 className="text-2xl font-bold mt-6 mb-4">{dict.home.gameTitle}</h1>
         <p className="text-gray-700 mb-8">{dict.home.gameDesc}</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
