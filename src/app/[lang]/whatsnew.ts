@@ -21,6 +21,15 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2025/08/27",
+    type: "Info",
+    description: {
+      id: "Migrasi website ke dcptrainz.my.id.",
+      en: "Website migration to dcptrainz.my.id.",
+      ko: "dcptrainz.my.id로 웹사이트 마이그레이션.",
+    },
+  },
+  {
     date: "2025/08/22",
     type: "New Content",
     description: {

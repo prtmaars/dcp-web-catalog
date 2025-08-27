@@ -125,7 +125,7 @@ export const fullDescStandard = {
 export const Locomotivess: Locomotives[] = [
   {
     id: 1,
-    title: "CC 203 78 01",
+    title: "BB 203 78 01",
     price: "IDR 70.000",
     subcat: "Standard Edition",
     img: "/locomotives/2037801.png",
