@@ -1,7 +1,7 @@
 import { getDictionary } from "@/i18n/getDictionary";
 import { notFound } from "next/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { FaInstagram, FaWhatsapp, FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaYoutube, FaFacebook, FaLink } from "react-icons/fa";
 import { teamMembers } from "./team";
 
 export default async function ContactPage({ params }: { params: { lang: string } }) {
@@ -125,22 +125,41 @@ export default async function ContactPage({ params }: { params: { lang: string }
 
               {/* Sosmed */}
               <div className="flex gap-4">
-                <a
-                  href={member.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-pink-500"
-                >
-                  <FaInstagram className="w-6 h-6" />
-                </a>
-                <a
-                  href={member.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-blue-600"
-                >
-                  <FaFacebook className="w-6 h-6" />
-                </a>
+                {/* Website (hanya muncul jika ada) */}
+                {member.website && (
+                  <a
+                    href={member.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-green-600"
+                  >
+                    <FaLink className="w-6 h-6" />
+                  </a>
+                )}
+
+                {/* Instagram */}
+                {member.instagram && (
+                  <a
+                    href={member.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-pink-500"
+                  >
+                    <FaInstagram className="w-6 h-6" />
+                  </a>
+                )}
+
+                {/* Facebook */}
+                {member.facebook && (
+                  <a
+                    href={member.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-blue-600"
+                  >
+                    <FaFacebook className="w-6 h-6" />
+                  </a>
+                )}
               </div>
             </div>
           ))}

@@ -5,6 +5,7 @@ export const teamMembers = [
       id: "Pendiri; Pembuat Lokomotif & Kereta",
       en: "Founder; Locomotive & Rolling Stock Creator",
       ko: "창립자; 기관차 및 차량 제작자",},
+    website: "https://tamars.my.id/",
     instagram: "https://www.instagram.com/_pratamars",
     facebook: "https://web.facebook.com/tamaa.449755/",
   },
