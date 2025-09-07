@@ -112,21 +112,34 @@ export default function Navbar() {
             <span className="material-icons">{t.close}</span>
           </button>
         </div>
-        <div className="flex flex-col px-4 py-4 space-y-4">
-          {menuItems.map((item, i) => (
-            <Link key={i} href={item.href} onClick={() => setSidebarOpen(false)}>
-              {item.label}
-            </Link>
-          ))}
+        <div className="flex flex-col px-4 py-4 space-y-2">
+          {menuItems.map((item, i) => {
+            const isActive = pathname === item.href;
 
-          {/* Mobile language switch tetap sederhana */}
+            return (
+              <Link
+                key={i}
+                href={item.href}
+                onClick={() => setSidebarOpen(false)}
+                className={`block px-4 py-2 rounded-md ${
+                  isActive
+                    ? "bg-[#0589ee] text-white font-semibold"
+                    : "text-black hover:bg-gray-100"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+
+          {/* Mobile language switch */}
           <div className="flex space-x-2 mt-4">
             {["id", "en", "ko"].map((l) => (
               <Link
                 key={l}
                 href={switchLang(l)}
-                className={`px-2 py-1 rounded ${
-                  lang === l ? "bg-[#0589ee] text-white font-semibold" : "hover:underline"
+                className={`px-3 py-1 rounded-md text-sm ${
+                  lang === l ? "bg-[#0589ee] text-white font-semibold" : "hover:bg-gray-100"
                 }`}
               >
                 {l.toUpperCase()}
