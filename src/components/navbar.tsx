@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { translations, LangType } from "@/i18n/translations";
+import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -13,6 +14,7 @@ export default function Navbar() {
   const t = translations[lang].navbar;
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
 
   const switchLang = (newLang: string) => {
     const newPath = ["/", newLang, ...segments.slice(2)].join("/");
@@ -23,8 +25,8 @@ export default function Navbar() {
     { href: `/${lang}`, label: t.home },
     { href: `/${lang}/locomotives`, label: t.locomotives },
     { href: `/${lang}/rollingstocks`, label: t.rollingstocks },
-    { href: `/${lang}/dieselmultipleunit`, label: t.dieselmultipleunit },
     { href: `/${lang}/objects`, label: t.objects },
+    { href: `/${lang}/route`, label: t.route },
     { href: `/${lang}/tutorial`, label: t.tutorial },
     { href: `/${lang}/contact`, label: t.contact },
   ];
@@ -32,45 +34,73 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-white text-black px-6 py-3 flex items-center justify-between shadow-md fixed top-0 left-0 w-full z-50">
-        {/* Logo */}
+        {/* Logo (kiri) */}
         <Link href={`/${lang}`} className="flex items-center space-x-2">
           <Image src="/logo.png" alt="DCP Logo" width={75} height={75} priority />
         </Link>
 
-        {/* Desktop menu */}
+        {/* Menu utama (tengah) */}
         <div className="hidden md:flex space-x-6">
-          {menuItems.map((item, i) => (
-            <Link key={i} href={item.href} className="hover:text-gray-200">
-              {item.label}
-            </Link>
-          ))}
+          {menuItems.map((item, i) => {
+            const isActive = pathname === item.href;
+
+            return (
+              <Link
+                key={i}
+                href={item.href}
+                className={`relative pb-1 transition-colors ${
+                  isActive
+                    ? "text-[#0589ee] font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#0589ee]"
+                    : "text-black hover:text-[#0589ee]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Language Dropdown (kanan) */}
+        <div className="hidden md:flex items-center relative">
+          <button
+            onClick={() => setLangOpen(!langOpen)}
+            className="flex items-center space-x-1 hover:text-gray-600"
+          >
+            <span className="font-medium">{lang.toUpperCase()}</span>
+            <ChevronDown
+              size={18}
+              className={`transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          {langOpen && (
+            <div className="absolute right-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden">
+              {["id", "en", "ko"].map((l) => (
+                <Link
+                  key={l}
+                  href={switchLang(l)}
+                  className={`block px-4 py-2 hover:bg-gray-100 ${
+                    lang === l ? "bg-[#0589ee] text-white font-semibold" : ""
+                  }`}
+                  onClick={() => setLangOpen(false)}
+                >
+                  {l.toUpperCase()}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Hamburger / mobile button */}
         <button
-          className="md:hidden flex items-center px-3 py-2 border rounded"
+          className="md:hidden flex items-center px-3 py-2"
           onClick={() => setSidebarOpen(!sidebarOpen)}
         >
           <span className="material-icons">{t.menu}</span>
         </button>
-
-        {/* Language Switch */}
-        <div className="hidden md:flex space-x-3">
-          {["id", "en", "ko"].map((l) => (
-            <Link
-              key={l}
-              href={switchLang(l)}
-              className={`px-2 py-1 rounded ${
-                lang === l ? "bg-[#0589ee] text-white font-semibold" : "hover:underline"
-              }`}
-            >
-              {l.toUpperCase()}
-            </Link>
-          ))}
-        </div>
       </nav>
 
-      {/* Sidebar overlay */}
+      {/* Sidebar untuk mobile */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -88,7 +118,8 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          {/* Mobile language switch */}
+
+          {/* Mobile language switch tetap sederhana */}
           <div className="flex space-x-2 mt-4">
             {["id", "en", "ko"].map((l) => (
               <Link
@@ -105,7 +136,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Optional: overlay behind sidebar */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-30 z-40"

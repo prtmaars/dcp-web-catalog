@@ -1,3 +1,5 @@
+import { routelayout } from "@/app/[lang]/route/routelayout";
+
 export const translations = {
   id: {
     home: {
@@ -23,6 +25,7 @@ export const translations = {
       rollingstocks: "KERETA",
       dieselmultipleunit: "KRD",
       objects: "OBJEK",
+      route: "RUTE",
       tutorial: "PANDUAN",
       contact: "KONTAK",
       menu: "MENU",
@@ -49,14 +52,9 @@ export const translations = {
       detailButton: "Rincian",
       buyButton: "Beli",
       closeButton: "Tutup",
-      buyMessage: "Halo admin, Saya ingin membeli addons"
-    },
-    dieselmultipleunit: {
-      pageTitle: "Kereta Rel Diesel",
-      detailButton: "Rincian",
-      buyButton: "Beli",
-      closeButton: "Tutup",
-      buyMessage: "Halo admin, Saya ingin membeli addons"
+      buyMessage: "Halo admin, Saya ingin membeli addons",
+      edTraincars: "Kereta Tak Berpenggerak",
+      edDMU: "Kereta Rel Diesel"
     },
     objects: {
       pageTitle: "Objek",
@@ -64,6 +62,14 @@ export const translations = {
       buyButton: "Unduh",
       closeButton: "Tutup",
       chooseDownload: "Pilih Versi"
+    },
+    routelayout: {
+      pageTitle: "Rute",
+      detailButton: "Rincian",
+      buyButton: "Beli",
+      closeButton: "Tutup",
+      buyMessage: "Halo admin, Saya ingin membeli addons",
+      reviewButton: "Review",
     },
     tutorial: {
       pageTitle: "Panduan",
@@ -109,6 +115,7 @@ export const translations = {
       rollingstocks: "ROLLING STOCKS",
       dieselmultipleunit: "DMU",
       objects: "OBJECTS",
+      route: "ROUTE",
       tutorial: "TUTORIAL",
       contact: "CONTACT",
       menu: "MENU",
@@ -135,14 +142,9 @@ export const translations = {
       detailButton: "Details",
       buyButton: "Buy",
       closeButton: "Close",
-      buyMessage: "Hello admin, I would like to buy"
-    },
-    dieselmultipleunit: {
-      pageTitle: "Diesel Multiple Unit",
-      detailButton: "Details",
-      buyButton: "Buy",
-      closeButton: "Close",
-      buyMessage: "Hello admin, I would like to buy"
+      buyMessage: "Hello admin, I would like to buy",
+      edTraincars: "Train Cars",
+      edDMU: "Diesel Multiple Unit"
     },
     objects: {
       pageTitle: "Objects",
@@ -150,6 +152,14 @@ export const translations = {
       buyButton: "Download",
       closeButton: "Close",
       chooseDownload: "Choose Version"
+    },
+    routelayout: {
+      pageTitle: "Route",
+      detailButton: "Details",
+      buyButton: "Buy",
+      closeButton: "Close",
+      buyMessage: "Hello admin, I would like to buy",
+      reviewButton: "Review",
     },
     tutorial: {
       pageTitle: "Tutorial",
@@ -194,6 +204,7 @@ export const translations = {
       rollingstocks: "열차",
       dieselmultipleunit: "디젤 동차",
       objects: "객체",
+      route: "노선",
       tutorial: "튜토리얼",
       contact: "문의",
       menu: "메뉴",
@@ -220,14 +231,9 @@ export const translations = {
       detailButton: "상세",
       buyButton: "구매",
       closeButton: "닫기",
-      buyMessage: "관리자님, 사고 싶은게 있는데요"
-    },
-    dieselmultipleunit: {
-      pageTitle: "디젤 동차",
-      detailButton: "상세",
-      buyButton: "구매",
-      closeButton: "닫기",
-      buyMessage: "관리자님, 사고 싶은게 있는데요"
+      buyMessage: "관리자님, 사고 싶은게 있는데요",
+      edTraincars: "열차",
+      edDMU: "디젤 동차"
     },
     objects: {
       pageTitle: "객체",
@@ -235,6 +241,14 @@ export const translations = {
       buyButton: "다운로드",
       closeButton: "닫기",
       chooseDownload: "버전 선택"
+    },
+    routelayout: {
+      pageTitle: "노선",
+      detailButton: "상세",
+      buyButton: "구매",
+      closeButton: "닫기",
+      buyMessage: "관리자님, 사고 싶은게 있는데요",
+      reviewButton: "검토",
     },
     tutorial: {
       pageTitle: "튜토리얼",

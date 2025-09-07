@@ -17,6 +17,19 @@ export default function RollingStocksPage() {
 
   const imagesPerPage = 1;
 
+  // --- Tambah daftar subcategories (edisi) ---
+  const subcategories: { key: string; label: string }[] = [
+    { key: "Kereta Tak Berpenggerak", label: t.edTraincars },
+    { key: "Kereta Rel Diesel", label: t.edDMU },
+  ];
+
+  // --- Group data sesuai subcategory ---
+  const grouped = rollingStocks.reduce((acc: Record<string, typeof rollingStocks>, item) => {
+    if (!acc[item.subcat]) acc[item.subcat] = [];
+    acc[item.subcat].push(item);
+    return acc;
+  }, {});
+
   const handleDetail = (item: typeof rollingStocks[0]) => {
     setSelected(item);
     setPage(0);
@@ -38,40 +51,52 @@ export default function RollingStocksPage() {
       {/* Judul halaman */}
       <h1 className="text-4xl font-bold mb-6 text-center">{t.pageTitle}</h1>
 
-      {/* Grid card */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {rollingStocks.map((item, i) => (
-          <div
-            key={i}
-            className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center"
-          >
-            {item.img && (
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-full h-45 object-cover rounded-md mb-3"
-              />
-            )}
-            <h2 className="text-lg font-semibold text-center">{item.title}</h2>
-            <p className="text-gray-600 text-center mb-3">{item.price}</p>
+      {/* Section per subcategory */}
+      {subcategories.map((sub) => (
+        <div
+          key={sub.key}
+          id={sub.key.replace(/\s+/g, "-").toLowerCase()}
+          className="mb-10 scroll-mt-24"
+        >
+          <h2 className="text-2xl font-bold mb-4">{sub.label}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(grouped[sub.key] || []).map((item, i) => (
+              <div
+                key={i}
+                className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center"
+              >
+                {item.img && (
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-45 object-cover rounded-md mb-3"
+                  />
+                )}
+                <h2 className="text-lg font-semibold text-center">{item.title}</h2>
+                <p className="text-gray-600 text-center mb-3">{item.price}</p>
 
-            <div className="flex gap-2">
-              <button
-                className="bg-[#0589ee] text-white px-4 py-2 rounded-lg hover:bg-[#046ebe]"
-                onClick={() => handleDetail(item)}
-              >
-                {t.detailButton}
-              </button>
-              <button
-                className="bg-[#42c249] text-white px-4 py-2 rounded-lg hover:bg-[#359b3a]"
-                onClick={() => handleBuy(item)}
-              >
-                {t.buyButton}
-              </button>
-            </div>
+                <div className="flex gap-2">
+                <button
+                  className="bg-[#0589ee] text-white px-4 py-2 rounded-lg hover:bg-[#046ebe]"
+                  onClick={() => handleDetail(item)}
+                >
+                  {t.detailButton}
+                </button>
+
+                {!item.hideBuy && ( // 👈 cek apakah tombol beli disembunyikan
+                  <button
+                    className="bg-[#42c249] text-white px-4 py-2 rounded-lg hover:bg-[#359b3a]"
+                    onClick={() => handleBuy(item)}
+                  >
+                    {t.buyButton}
+                  </button>
+                )}
+              </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
 
       {/* Modal Detail */}
       <Transition.Root show={open} as={Fragment}>
@@ -152,7 +177,7 @@ export default function RollingStocksPage() {
 
                   {/* Price */}
                   <p className="text-gray-600 font-semibold mb-3">{selected?.price}</p>
-                  
+
                   {/* Content */}
                   <p className="text-gray-700 mb-4 whitespace-pre-line text-left">
                     {selected?.content[lang]}
@@ -165,19 +190,22 @@ export default function RollingStocksPage() {
 
                   {/* Buttons */}
                   <div className="flex justify-end gap-2">
-                    <button
-                      className="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400"
-                      onClick={() => setOpen(false)}
-                    >
-                      {t.closeButton}
-                    </button>
+                  <button
+                    className="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400"
+                    onClick={() => setOpen(false)}
+                  >
+                    {t.closeButton}
+                  </button>
+
+                  {!selected?.hideBuy && (
                     <button
                       className="bg-[#42c249] text-white px-3 py-1 rounded hover:bg-[#359b3a]"
                       onClick={() => selected && handleBuy(selected)}
                     >
                       {t.buyButton}
                     </button>
-                  </div>
+                  )}
+                </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
