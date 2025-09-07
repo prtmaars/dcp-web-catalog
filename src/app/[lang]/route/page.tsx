@@ -2,28 +2,29 @@
 
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { routelayout } from "./routelayout";
+import { routelayout, RouteLayout } from "./routelayout";
 import { translations, LangType } from "@/i18n/translations";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 
 export default function RoutelayoutPage() {
   const params = useParams();
-  const lang = (params.lang as LangType) || "id"; // default ID
+  const lang = (params?.lang as LangType) || "id"; // default ID
   const t = translations[lang].routelayout;
 
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState<typeof routelayout[0] | null>(null);
+  const [selected, setSelected] = useState<RouteLayout | null>(null);
   const [page, setPage] = useState(0);
 
   const imagesPerPage = 1;
 
-  const handleDetail = (item: typeof routelayout[0]) => {
+  const handleDetail = (item: RouteLayout) => {
     setSelected(item);
     setPage(0);
     setOpen(true);
   };
 
-  const handleBuy = (item: typeof routelayout[0]) => {
+  const handleBuy = (item: RouteLayout) => {
     const msg = encodeURIComponent(`${t.buyMessage} ${item.title}.`);
     window.open(`https://wa.me/6281225478563?text=${msg}`, "_blank");
   };
@@ -40,16 +41,18 @@ export default function RoutelayoutPage() {
 
       {/* Grid card */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {routelayout.map((item, i) => (
+        {routelayout.map((item) => (
           <div
-            key={i}
+            key={item.id}
             className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center"
           >
             {item.img && (
-              <img
+              <Image
                 src={item.img}
                 alt={item.title}
-                className="w-full h-63 object-cover rounded-md mb-3"
+                width={500}
+                height={250}
+                className="w-full h-64 object-cover rounded-md mb-3"
               />
             )}
 
@@ -122,13 +125,15 @@ export default function RoutelayoutPage() {
                     <div className="mb-4">
                       <div className="grid grid-cols-1 gap-2">
                         {paginatedImages?.map((img, idx) => (
-                          <img
+                          <Image
                             key={idx}
                             src={img}
                             alt={`${selected.title} - image ${
                               page * imagesPerPage + idx + 1
                             }`}
-                            className="w-full h-70 object-cover rounded-md"
+                            width={500}
+                            height={280}
+                            className="w-full h-72 object-cover rounded-md"
                           />
                         ))}
                       </div>
