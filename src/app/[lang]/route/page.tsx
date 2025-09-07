@@ -6,7 +6,7 @@ import { routelayout } from "./routelayout";
 import { translations, LangType } from "@/i18n/translations";
 import { useParams } from "next/navigation";
 
-export default function routelayoutPage() {
+export default function RoutelayoutPage() {
   const params = useParams();
   const lang = (params.lang as LangType) || "id"; // default ID
   const t = translations[lang].routelayout;
