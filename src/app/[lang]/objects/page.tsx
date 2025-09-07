@@ -4,11 +4,11 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { objects, Objects, DownloadLink } from "./objects";
 import { translations, LangType } from "@/i18n/translations";
-import { useParams } from "next/navigation"; // untuk mengambil [lang]
+import { useParams } from "next/navigation";
 
 export default function ObjectsPage() {
   const params = useParams();
-  const lang = (params.lang as LangType) || "id"; // default ID
+  const lang = (params.lang as LangType) || "id";
   const t = translations[lang].objects;
 
   const [open, setOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function ObjectsPage() {
   const handleBuy = (item: Objects) => {
     if (item.extraUrls && item.extraUrls.length > 0) {
       setDownloadLinks([
-        { label: t.buyButton, url: item.url }, // tombol utama
+        { label: t.buyButton, url: item.url },
         ...item.extraUrls
       ]);
       setDownloadOpen(true);

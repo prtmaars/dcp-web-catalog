@@ -11,7 +11,6 @@ export default function Gallery({ images, perPage = 6 }: GalleryProps) {
   const [page, setPage] = useState(1);
   const [shuffledImages, setShuffledImages] = useState<string[]>([]);
 
-  // Shuffle images client-side setelah mount
   useEffect(() => {
     const shuffled = [...images];
     for (let i = shuffled.length - 1; i > 0; i--) {

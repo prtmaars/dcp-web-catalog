@@ -2,7 +2,6 @@ import { getDictionary } from "@/i18n/getDictionary";
 import { notFound } from "next/navigation";
 
 export default async function TutorialPage({ params }: { params: { lang: "en" | "id" | "ko" } }) {
-  // pastikan await digunakan
   const dict = await getDictionary(params.lang);
   if (!dict) return notFound();
 

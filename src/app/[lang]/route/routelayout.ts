@@ -5,18 +5,18 @@ export interface MultiLangText {
 }
 
 export interface PriceOption {
-  platform: string; // misalnya: "Android", "PC", "iOS"
-  value: string;    // misalnya: "IDR 20.000"
+  platform: string;
+  value: string;
 }
 
 export interface RouteLayout {
   id: number;
   title: string;
-  prices: PriceOption[]; // array harga per platform
+  prices: PriceOption[];
   img: string;
   gallery: string[];
   fullDesc: MultiLangText;
-  reviews?: string[]; // optional supaya tidak wajib di semua data
+  reviews?: string[];
 }
 
 export const routelayout: RouteLayout[] = [

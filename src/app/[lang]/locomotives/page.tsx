@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 
 export default function LocomotivesPage() {
   const params = useParams();
-  const lang = (params.lang as LangType) || "id"; // default ID
+  const lang = (params.lang as LangType) || "id";
   const t = translations[lang].locomotives;
 
   const [open, setOpen] = useState(false);

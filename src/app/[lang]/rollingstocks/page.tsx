@@ -4,11 +4,11 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { rollingStocks } from "./rollingstocks";
 import { translations, LangType } from "@/i18n/translations";
-import { useParams } from "next/navigation"; // untuk mengambil [lang]
+import { useParams } from "next/navigation";
 
 export default function RollingStocksPage() {
   const params = useParams();
-  const lang = (params.lang as LangType) || "id"; // default ID
+  const lang = (params.lang as LangType) || "id";
   const t = translations[lang].rollingstocks;
 
   const [open, setOpen] = useState(false);
@@ -17,13 +17,11 @@ export default function RollingStocksPage() {
 
   const imagesPerPage = 1;
 
-  // --- Tambah daftar subcategories (edisi) ---
   const subcategories: { key: string; label: string }[] = [
     { key: "Kereta Tak Berpenggerak", label: t.edTraincars },
     { key: "Kereta Rel Diesel", label: t.edDMU },
   ];
 
-  // --- Group data sesuai subcategory ---
   const grouped = rollingStocks.reduce((acc: Record<string, typeof rollingStocks>, item) => {
     if (!acc[item.subcat]) acc[item.subcat] = [];
     acc[item.subcat].push(item);
@@ -83,7 +81,7 @@ export default function RollingStocksPage() {
                   {t.detailButton}
                 </button>
 
-                {!item.hideBuy && ( // 👈 cek apakah tombol beli disembunyikan
+                {!item.hideBuy && (
                   <button
                     className="bg-[#42c249] text-white px-4 py-2 rounded-lg hover:bg-[#359b3a]"
                     onClick={() => handleBuy(item)}

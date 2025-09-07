@@ -11,13 +11,11 @@ export default async function HomePage({ params }: { params: { lang: "en" | "id"
 
   if (!dict) return notFound();
 
-  // gallery auto 60 gambar
   const galleryImages = Array.from({ length: 60 }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
     return `/gallery/galeri${num}.jpg`;
   });
 
-  // daftar game (title tetap fix, button pakai i18n)
   const games = [
     {
       title: "Trainz Railroad Simulator 2022",
