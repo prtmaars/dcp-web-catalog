@@ -5,10 +5,11 @@ export interface MultiLangText {
 }
 
 export interface RollingStock {
-  id: number;
   title: string;
   price: string;
+  version: MultiLangText;
   hideBuy: boolean;
+  bestseller: boolean;
   subcat: string;
   img: string;
   gallery: string[];
@@ -115,10 +116,15 @@ export const fullDescStandard2 = {
 
 export const rollingStocks: RollingStock[] = [
   {
-    id: 1,
     title:"Kereta Wisata Pack",
-    price: "IDR 30.000",
+    price: "IDR 20.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
     hideBuy: false,
+    bestseller: true,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-kereta-wisata_orig.jpg",
     gallery: [
@@ -198,84 +204,15 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard2,
   },
   {
-    id: 2,
-    title:"New Image Pack",
-    price: "IDR 20.000",
-    hideBuy: false,
-    subcat: "Kereta Tak Berpenggerak",
-    img: "/rollingstocks/pack-new-image_orig.jpg",
-    gallery: [
-      "/rollingstocks/newimage01.jpeg",
-      "/rollingstocks/newimage02.jpeg",
-      "/rollingstocks/newimage03.jpeg",
-      "/rollingstocks/newimage04.jpg",
-      "/rollingstocks/newimage05.png",
-      "/rollingstocks/newimage06.png",
-      "/rollingstocks/newimage07.png",
-      "/rollingstocks/newimage08.jpg",
-      "/rollingstocks/newimage09.jpg",
-      "/rollingstocks/newimage10.jpg",
-      "/rollingstocks/newimage11.jpg",
-      "/rollingstocks/newimage12.jpg",
-      "/rollingstocks/newimage13.jpg",
-      "/rollingstocks/newimage14.jpg",
-      "/rollingstocks/newimage15.jpg",
-      "/rollingstocks/newimage16.jpg",
-      "/rollingstocks/newimage17.jpg",
-      "/rollingstocks/newimage18.jpg",
-      "/rollingstocks/newimage19.jpg",
-      "/rollingstocks/newimage20.jpg",
-      "/rollingstocks/newimage21.jpg",
-      "/rollingstocks/newimage22.jpg",
-    ],
-    content: {
-      id: `Isi Pack:
-            1. K1 0 16 XX
-            2. M1 0 16 XX
-            3. P 0 16 XX
-            4. K3 0 16 XX
-            5. K3 0 16 XX - DIFABEL
-            6. MP3 0 16 XX
-            7. K3 0 17 XX
-            8. K3 0 17 XX - DIFABEL
-            9. MP3 0 17 XX
-            10. K1 0 09 05
-            11. M1 0 08 03
-            12​. M1 0 82 10`,
-      en: `Pack Contents:
-            1. K1 0 16 XX
-            2. M1 0 16 XX
-            3. P 0 16 XX
-            4. K3 0 16 XX
-            5. K3 0 16 XX - DISABLED
-            6. MP3 0 16 XX
-            7. K3 0 17 XX
-            8. K3 0 17 XX - DISABLED
-            9. MP3 0 17 XX
-            10. K1 0 09 05
-            11. M1 0 08 03
-            12​. M1 0 82 10`,
-      ko: `패키지 구성품:
-            1. K1 0 16 XX
-            2. M1 0 16 XX
-            3. P 0 16 XX
-            4. K3 0 16 XX
-            5. K3 0 16 XX - 디파벨
-            6. MP3 0 16 XX
-            7. K3 0 17 XX
-            8. K3 0 17 XX - 디파벨
-            9. MP3 0 17 XX
-            10. K1 0 09 05
-            11. M1 0 08 03
-            12. M1 0 82 10`,
-    },
-    fullDesc: fullDescStandard1,
-  },
-  {
-    id: 3,
     title:"Eksekutif Pack",
-    price: "IDR 30.000",
+    price: "IDR 20.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
     hideBuy: false,
+    bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-eksekutif_orig.jpg",
     gallery: [
@@ -354,10 +291,94 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard1,
   },
   {
-    id: 4,
-    title:"Bisnis Pack",
-    price: "IDR 20.000",
+    title:"New Image Pack",
+    price: "IDR 15.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
     hideBuy: false,
+    bestseller: true,
+    subcat: "Kereta Tak Berpenggerak",
+    img: "/rollingstocks/pack-new-image_orig.jpg",
+    gallery: [
+      "/rollingstocks/newimage01.jpeg",
+      "/rollingstocks/newimage02.jpeg",
+      "/rollingstocks/newimage03.jpeg",
+      "/rollingstocks/newimage04.jpg",
+      "/rollingstocks/newimage05.png",
+      "/rollingstocks/newimage06.png",
+      "/rollingstocks/newimage07.png",
+      "/rollingstocks/newimage08.jpg",
+      "/rollingstocks/newimage09.jpg",
+      "/rollingstocks/newimage10.jpg",
+      "/rollingstocks/newimage11.jpg",
+      "/rollingstocks/newimage12.jpg",
+      "/rollingstocks/newimage13.jpg",
+      "/rollingstocks/newimage14.jpg",
+      "/rollingstocks/newimage15.jpg",
+      "/rollingstocks/newimage16.jpg",
+      "/rollingstocks/newimage17.jpg",
+      "/rollingstocks/newimage18.jpg",
+      "/rollingstocks/newimage19.jpg",
+      "/rollingstocks/newimage20.jpg",
+      "/rollingstocks/newimage21.jpg",
+      "/rollingstocks/newimage22.jpg",
+    ],
+    content: {
+      id: `Isi Pack:
+            1. K1 0 16 XX
+            2. M1 0 16 XX
+            3. P 0 16 XX
+            4. K3 0 16 XX
+            5. K3 0 16 XX - DIFABEL
+            6. MP3 0 16 XX
+            7. K3 0 17 XX
+            8. K3 0 17 XX - DIFABEL
+            9. MP3 0 17 XX
+            10. K1 0 09 05
+            11. M1 0 08 03
+            12​. M1 0 82 10`,
+      en: `Pack Contents:
+            1. K1 0 16 XX
+            2. M1 0 16 XX
+            3. P 0 16 XX
+            4. K3 0 16 XX
+            5. K3 0 16 XX - DISABLED
+            6. MP3 0 16 XX
+            7. K3 0 17 XX
+            8. K3 0 17 XX - DISABLED
+            9. MP3 0 17 XX
+            10. K1 0 09 05
+            11. M1 0 08 03
+            12​. M1 0 82 10`,
+      ko: `패키지 구성품:
+            1. K1 0 16 XX
+            2. M1 0 16 XX
+            3. P 0 16 XX
+            4. K3 0 16 XX
+            5. K3 0 16 XX - 디파벨
+            6. MP3 0 16 XX
+            7. K3 0 17 XX
+            8. K3 0 17 XX - 디파벨
+            9. MP3 0 17 XX
+            10. K1 0 09 05
+            11. M1 0 08 03
+            12. M1 0 82 10`,
+    },
+    fullDesc: fullDescStandard1,
+  },
+  {
+    title:"Bisnis Pack",
+    price: "IDR 15.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
+    hideBuy: false,
+    bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-bisnis_orig.jpg",
     gallery: [
@@ -405,10 +426,15 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard1,
   },
   {
-    id: 5,
     title:"Ekonomi Pack",
-    price: "IDR 20.000",
+    price: "IDR 15.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
     hideBuy: false,
+    bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-ekonomi_orig.jpg",
     gallery: [
@@ -459,50 +485,15 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard1,
   },
   {
-    id: 6,
-    title:"Kedinasan Pack",
-    price: "IDR 20.000",
-    hideBuy: false,
-    subcat: "Kereta Tak Berpenggerak",
-    img: "/rollingstocks/pack-kedinasan_orig.jpg",
-    gallery: [
-      "/rollingstocks/kedinasan01.jpg",
-      "/rollingstocks/kedinasan02.jpg",
-      "/rollingstocks/kedinasan03.jpg",
-    ],
-    content: {
-      id: `Isi Pack:
-            1. MP3 0 10 03 - MARTAPURA
-            2. SI 0 16 01 - MENDAWAI
-            3. SI 0 11 01 - BARITO
-            4. SI 0 11 02 - KAHAYAN
-            5. SI 0 09 01 - MAHAKAM
-            6. SI 0 09 02 - KAPUAS
-            7. SU 0 18 01 - FUDIKA`,
-      en: `Pack Contents:
-            1. MP3 0 10 03 - MARTAPURA
-            2. SI 0 16 01 - MENDAWAI
-            3. SI 0 11 01 - BARITO
-            4. SI 0 11 02 - KAHAYAN
-            5. SI 0 09 01 - MAHAKAM
-            6. SI 0 09 02 - KAPUAS
-            7. SU 0 18 01 - FUDIKA`,
-      ko: `패키지 구성:
-            1. MP3 0 10 03 - 마르타푸라
-            2. THE 0 16 01 - 멘다와이
-            3. SI 0 11 01 - 뉴스
-            4. THE 0 11 02 - 라이트
-            5. THE 0 09 01 - 코트
-            6. THE 0 09 02 - 코트
-            7. SU 0 18 01 - 푸디카`,
-    },
-    fullDesc: fullDescStandard1,
-  },
-  {
-    id: 7,
     title:"Satwa Pack [SPECIAL EDITION]",
-    price: "IDR 20.000",
+    price: "IDR 15.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
     hideBuy: false,
+    bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-satwa-orig_orig.jpg",
     gallery: [
@@ -555,10 +546,60 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard2,
   },
   {
-    id: 8,
+    title:"Kedinasan Pack",
+    price: "IDR 10.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
+    hideBuy: false,
+    bestseller: false,
+    subcat: "Kereta Tak Berpenggerak",
+    img: "/rollingstocks/pack-kedinasan_orig.jpg",
+    gallery: [
+      "/rollingstocks/kedinasan01.jpg",
+      "/rollingstocks/kedinasan02.jpg",
+      "/rollingstocks/kedinasan03.jpg",
+    ],
+    content: {
+      id: `Isi Pack:
+            1. MP3 0 10 03 - MARTAPURA
+            2. SI 0 16 01 - MENDAWAI
+            3. SI 0 11 01 - BARITO
+            4. SI 0 11 02 - KAHAYAN
+            5. SI 0 09 01 - MAHAKAM
+            6. SI 0 09 02 - KAPUAS
+            7. SU 0 18 01 - FUDIKA`,
+      en: `Pack Contents:
+            1. MP3 0 10 03 - MARTAPURA
+            2. SI 0 16 01 - MENDAWAI
+            3. SI 0 11 01 - BARITO
+            4. SI 0 11 02 - KAHAYAN
+            5. SI 0 09 01 - MAHAKAM
+            6. SI 0 09 02 - KAPUAS
+            7. SU 0 18 01 - FUDIKA`,
+      ko: `패키지 구성:
+            1. MP3 0 10 03 - 마르타푸라
+            2. THE 0 16 01 - 멘다와이
+            3. SI 0 11 01 - 뉴스
+            4. THE 0 11 02 - 라이트
+            5. THE 0 09 01 - 코트
+            6. THE 0 09 02 - 코트
+            7. SU 0 18 01 - 푸디카`,
+    },
+    fullDesc: fullDescStandard1,
+  },
+  {
     title:"Bagasi Pack",
     price: "IDR 0 (Bonus)",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
     hideBuy: true,
+    bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-bagasi_orig.jpg",
     gallery: [
@@ -620,10 +661,15 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard2,
   },
   {
-    id: 9,
     title:"Kereta Pembangkit Pack",
     price: "IDR 0 (Bonus)",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
     hideBuy: true,
+    bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-pembangkit-orig_orig.jpg",
     gallery: [
@@ -666,10 +712,15 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard2,
   },
   {
-    id: 10,
     title:"Kereta Penolong Pack",
     price: "IDR 0 (Bonus)",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
     hideBuy: true,
+    bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-kereta-penolong_orig.jpg",
     gallery: [
@@ -716,10 +767,89 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard2,
   },
   {
-    id: 11,
+    title:"Kereta Petani",
+    price: "IDR 0 (Bonus)",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
+    hideBuy: true,
+    bestseller: false,
+    subcat: "Kereta Tak Berpenggerak",
+    img: "/rollingstocks/petani01.jpg",
+    gallery: [
+      "/rollingstocks/petani01.jpg",
+      "/rollingstocks/petani02.jpg",
+      "/rollingstocks/eksislodayapetani.jpg",
+    ],
+    content: {
+      id: `Bonus konten ini bisa didapatkan di grup user setelah membeli minimal 1 pack kereta.`,
+      en: `This bonus content can be obtained in the user group after purchasing at least 1 train pack.`,
+      ko: `이 보너스 콘텐츠는 최소 1개의 기차 팩을 구매한 후 사용자 그룹에서 얻을 수 있습니다.`,
+    },
+    fullDesc: fullDescStandard2,
+  },
+  {
+    title:"Kereta Lodaya Livery Krem",
+    price: "IDR 0 (Bonus)",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
+    hideBuy: true,
+    bestseller: false,
+    subcat: "Kereta Tak Berpenggerak",
+    img: "/rollingstocks/lodayakrem01.jpg",
+    gallery: [
+      "/rollingstocks/lodayakrem01.jpg",
+      "/rollingstocks/lodayakrem02.jpg",
+      "/rollingstocks/lodayakrem03.jpg",
+      "/rollingstocks/eksislodayapetani.jpg",
+    ],
+    content: {
+      id: `Bonus konten ini bisa didapatkan di grup user setelah membeli minimal 1 pack kereta.`,
+      en: `This bonus content can be obtained in the user group after purchasing at least 1 train pack.`,
+      ko: `이 보너스 콘텐츠는 최소 1개의 기차 팩을 구매한 후 사용자 그룹에서 얻을 수 있습니다.`,
+    },
+    fullDesc: fullDescStandard2,
+  },
+  {
+    title:"Kereta Eksekutif Livery Eksis",
+    price: "IDR 0 (Bonus)",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
+    hideBuy: true,
+    bestseller: false,
+    subcat: "Kereta Tak Berpenggerak",
+    img: "/rollingstocks/eksis01.jpg",
+    gallery: [
+      "/rollingstocks/eksis01.jpg",
+      "/rollingstocks/eksis02.jpg",
+      "/rollingstocks/eksis03.jpg",
+      "/rollingstocks/eksislodayapetani.jpg",
+    ],
+    content: {
+      id: `Bonus konten ini bisa didapatkan di grup user setelah membeli minimal 1 pack kereta.`,
+      en: `This bonus content can be obtained in the user group after purchasing at least 1 train pack.`,
+      ko: `이 보너스 콘텐츠는 최소 1개의 기차 팩을 구매한 후 사용자 그룹에서 얻을 수 있습니다.`,
+    },
+    fullDesc: fullDescStandard2,
+  },
+  {
     title:"Kereta Inspeksi Pack",
-    price: "IDR 20.000",
+    price: "IDR 10.000",
+    version: {
+      id: "Versi 1.0 FINAL",
+      en: "Version 1.0 FINAL",
+      ko: "버전 1.0 최종"
+    },
     hideBuy: false,
+    bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/kais_orig.jpg",
     gallery: [
@@ -804,10 +934,15 @@ export const rollingStocks: RollingStock[] = [
     },
   },
   {
-    id: 12,
     title:"Rail Clinic Pack",
-    price: "IDR 20.000",
+    price: "IDR 10.000",
+    version: {
+      id: "Versi 1.0 FINAL",
+      en: "Version 1.0 FINAL",
+      ko: "버전 1.0 최종"
+    },
     hideBuy: false,
+    bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/rcl_orig.jpg",
     gallery: [
@@ -884,7 +1019,7 @@ export const rollingStocks: RollingStock[] = [
             6. Medium Poly
             7. Siren Sound
             8. Automatic Night Mode
-            9. Mottos 26 & 27`,
+            9. Signal 26 & 27`,
       ko: `특징:
             1. S21 주간 주행 모드 (S21은 탈부착 가능)
             2. S21 야간 주행 모드 (8개의 조명으로 구성되며, 각 조명은 개별적으로 켜고 끌 수 있으며 코로나 형태입니다)
@@ -894,14 +1029,19 @@ export const rollingStocks: RollingStock[] = [
             6. 중간 폴리
             7. 사이렌 ​​소리
             8. 자동 야간 모드
-            9. 모토 26 & 27`,
+            9. 신호 26 & 27`,
     },
   },
   {
-    id: 13,
     title:"MCW 302",
-    price: "IDR 20.000",
+    price: "IDR 10.000",
+    version: {
+      id: "Versi 1.0 FINAL",
+      en: "Version 1.0 FINAL",
+      ko: "버전 1.0 최종"
+    },
     hideBuy: false,
+    bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/mcw302_orig.jpg",
     gallery: [
@@ -967,7 +1107,7 @@ export const rollingStocks: RollingStock[] = [
             7. Low Poly
             8. Change Livery via Surveyor (there are over 30 different liveries available)
             9. Front connection rubber mesh appears/disappears (via surveyor)
-            10. Slogan 26/27 cover mesh appears/disappears (via surveyor)`,
+            10. Signal 26/27 cover mesh appears/disappears (via surveyor)`,
       ko: `특징:
             1. S21 주간 (S21은 탈부착 가능한 두 가지 버전이 있습니다)
             2. S21 야간 켜기/끄기 (개별적으로 켜고 끌 수 있는 12개의 조명으로 구성되며 코로나 모양입니다)
@@ -978,14 +1118,19 @@ export const rollingStocks: RollingStock[] = [
             7. 로우 폴리
             8. Surveyor를 통한 리버리 변경 (30가지 이상의 다양한 리버리 사용 가능)
             9. 전면 연결 고무 메시가 나타나거나 사라집니다 (Surveyor를 통해)
-            10. Slogan 26/27 커버 메시가 나타나거나 사라집니다 (Surveyor를 통해)`,
+            10. 신호 26/27 커버 메시가 나타나거나 사라집니다 (Surveyor를 통해)`,
     },
   },
   {
-    id: 14,
     title:"Minnion Pack",
-    price: "IDR 20.000",
+    price: "IDR 10.000",
+    version: {
+      id: "Versi 1.0 FINAL",
+      en: "Version 1.0 FINAL",
+      ko: "버전 1.0 최종"
+    },
     hideBuy: false,
+    bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/minnion_orig.jpg",
     gallery: [
@@ -1084,6 +1229,66 @@ export const rollingStocks: RollingStock[] = [
             5. HD 디지털 스킨
             6. 중간 폴리
             7. 사이렌 ​​소리`,
+    },
+  },
+  {
+    title:"Kedung Sepur Pack",
+    price: "IDR 5.000",
+    version: {
+      id: "Versi 1.0 FINAL",
+      en: "Version 1.0 FINAL",
+      ko: "버전 1.0 최종"
+    },
+    hideBuy: false,
+    bestseller: false,
+    subcat: "Kereta Rel Diesel",
+    img: "/dieselmultipleunit/kds01.jpg",
+    gallery: [
+      "/dieselmultipleunit/kds01.jpg",
+      "/dieselmultipleunit/kds02.jpg",
+      "/dieselmultipleunit/kds03.jpg",
+      "/dieselmultipleunit/kds04.jpg",
+      "/dieselmultipleunit/kds05.jpg",
+    ],
+    content: {
+      id: `Isi Pack:
+            1. K1 3 80 02 
+            2. K1 3 82 01 
+            3. K1 3 82 03 
+            4. K1 3 82 04 
+            5. K1 3 82 05 
+            6. K1 3 87 01`,
+      en: `Pack Contents: 
+            1. K1 3 80 02 
+            2. K1 3 82 01 
+            3. K1 3 82 03 
+            4. K1 3 82 04 
+            5. K1 3 82 05 
+            6. K1 3 87 01`,
+      ko: `패키지 구성:
+            1. K1 3 80 02 
+            2. K1 3 82 01 
+            3. K1 3 82 03 
+            4. K1 3 82 04 
+            5. K1 3 82 05 
+            6. K1 3 87 01`,
+    },
+    fullDesc: {
+      id: `Fitur:
+            1. HD Digital Skin
+            2. Medium Poly
+            3. Mode Malam Otomatis
+            4. Semboyan 26 & 27`,
+      en: `Feature: 
+            1. HD Digital Skin
+            2. Medium Poly
+            3. Automatic Night Mode
+            4. Signal 26 & 27`,
+      ko: `특징:
+            1. HD 디지털 스킨
+            2. 중간 폴리
+            3. 자동 야간 모드
+            4. 신호 26 & 27`,
     },
   },
   

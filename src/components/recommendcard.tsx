@@ -2,39 +2,28 @@
 
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { rollingStocks } from "./rollingstocks";
-import { translations, LangType } from "@/i18n/translations";
+import { Recommendations } from "@/app/[lang]/recommendation";
 import { useParams } from "next/navigation";
+import { translations, LangType } from "@/i18n/translations";
 
-export default function RollingStocksPage() {
+export default function RecommendationSection() {
   const params = useParams();
   const lang = (params.lang as LangType) || "id";
-  const t = translations[lang].rollingstocks;
+  const t = translations[lang].locomotives;
 
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState<typeof rollingStocks[0] | null>(null);
+  const [selected, setSelected] = useState<any | null>(null);
   const [page, setPage] = useState(0);
 
   const imagesPerPage = 1;
 
-  const subcategories: { key: string; label: string }[] = [
-    { key: "Kereta Tak Berpenggerak", label: t.edTraincars },
-    { key: "Kereta Rel Diesel", label: t.edDMU },
-  ];
-
-  const grouped = rollingStocks.reduce((acc: Record<string, typeof rollingStocks>, item) => {
-    if (!acc[item.subcat]) acc[item.subcat] = [];
-    acc[item.subcat].push(item);
-    return acc;
-  }, {});
-
-  const handleDetail = (item: typeof rollingStocks[0]) => {
+  const handleDetail = (item: any) => {
     setSelected(item);
     setPage(0);
     setOpen(true);
   };
 
-  const handleBuy = (item: typeof rollingStocks[0]) => {
+  const handleBuy = (item: any) => {
     const msg = encodeURIComponent(`${t.buyMessage} ${item.title}.`);
     window.open(`https://wa.me/62859106997891?text=${msg}`, "_blank");
   };
@@ -46,69 +35,55 @@ export default function RollingStocksPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-10">
-      {/* Judul halaman */}
-      <h1 className="text-4xl font-bold mb-6 text-center">{t.pageTitle}</h1>
+      <h2 className="text-2xl font-bold mb-6">
+        {translations[lang].home.recommendation}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {Recommendations.map((item) => (
+          <div
+            key={item.id}
+            className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center relative"
+          >
+            {/* Badge Best Seller */}
+            {item.bestseller && (
+              <span className="absolute bottom-24 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                Best Seller
+              </span>
+            )}
 
-      {/* Section per subcategory */}
-      {subcategories.map((sub) => (
-        <div
-          key={sub.key}
-          id={sub.key.replace(/\s+/g, "-").toLowerCase()}
-          className="mb-10 scroll-mt-24"
-        >
-          <h2 className="text-2xl font-bold mb-4">{sub.label}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {(grouped[sub.key] || []).map((item, i) => (
-              <div
-                key={i}
-                className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center relative"
+            <div className="relative w-full mb-3">
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-full h-64 object-cover rounded-md"
+              />
+              {item.version && (
+                <span className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  {item.version[lang as keyof typeof item.version]}
+                </span>
+              )}
+            </div>
+
+            <h2 className="text-lg font-semibold text-center">{item.title}</h2>
+            <p className="text-gray-600 text-center mb-3">{item.price}</p>
+
+            <div className="flex gap-2">
+              <button
+                className="bg-[#0589ee] text-white px-4 py-2 rounded-lg hover:bg-[#046ebe]"
+                onClick={() => handleDetail(item)}
               >
-                {item.bestseller && (
-                  <span className="absolute bottom-24 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
-                    Best Seller
-                  </span>
-                )}
-
-                {item.img && (
-                  <div className="relative w-full mb-3">
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-65 object-cover rounded-md"
-                    />
-                    {item.version && (
-                      <span className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                        {item.version[lang as keyof typeof item.version]}
-                      </span>
-                    )}
-                  </div>
-                )}
-
-                <h2 className="text-lg font-semibold text-center">{item.title}</h2>
-                <p className="text-gray-600 text-center mb-3">{item.price}</p>
-
-                <div className="flex gap-2">
-                  <button
-                    className="bg-[#0589ee] text-white px-4 py-2 rounded-lg hover:bg-[#046ebe]"
-                    onClick={() => handleDetail(item)}
-                  >
-                    {t.detailButton}
-                  </button>
-
-                  {!item.hideBuy && (
-                    <button
-                      className="bg-[#42c249] text-white px-4 py-2 rounded-lg hover:bg-[#359b3a]"
-                      onClick={() => handleBuy(item)}
-                    >
-                      {t.buyButton}
-                    </button>
-                  )}
-                </div>
-              </div>
-            ))}
+                {t.detailButton}
+              </button>
+              <button
+                className="bg-[#42c249] text-white px-4 py-2 rounded-lg hover:bg-[#359b3a]"
+                onClick={() => handleBuy(item)}
+              >
+                {t.buyButton}
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       {/* Modal Detail */}
       <Transition.Root show={open} as={Fragment}>
@@ -141,11 +116,10 @@ export default function RollingStocksPage() {
                     {selected?.title}
                   </Dialog.Title>
 
-                  {/* Gallery */}
                   {selected?.gallery?.length ? (
                     <div className="mb-4">
                       <div className="grid grid-cols-1 gap-2">
-                        {paginatedImages?.map((img, idx) => (
+                        {paginatedImages?.map((img: string, idx: number) => (
                           <img
                             key={idx}
                             src={img}
@@ -156,7 +130,6 @@ export default function RollingStocksPage() {
                       </div>
 
                       <div className="flex justify-between mt-2">
-                        {/* Previous Button */}
                         <button
                           className="px-2 py-1 bg-gray-300 rounded"
                           onClick={() =>
@@ -170,7 +143,6 @@ export default function RollingStocksPage() {
                           &lt;
                         </button>
 
-                        {/* Next Button */}
                         <button
                           className="px-2 py-1 bg-gray-300 rounded"
                           onClick={() =>
@@ -187,37 +159,28 @@ export default function RollingStocksPage() {
                     </div>
                   ) : null}
 
-                  {/* Price */}
-                  <p className="text-gray-600 font-semibold mb-3">{selected?.price}</p>
-
-                  {/* Content */}
-                  <p className="text-gray-700 mb-4 whitespace-pre-line text-left">
-                    {selected?.content[lang]}
+                  <p className="text-gray-600 font-semibold mb-3">
+                    {selected?.price}
                   </p>
 
-                  {/* Description */}
                   <p className="text-gray-700 mb-4 whitespace-pre-line text-left">
-                    {selected?.fullDesc[lang]}
+                    {selected?.fullDesc[lang as keyof typeof selected.fullDesc]}
                   </p>
 
-                  {/* Buttons */}
                   <div className="flex justify-end gap-2">
-                  <button
-                    className="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400"
-                    onClick={() => setOpen(false)}
-                  >
-                    {t.closeButton}
-                  </button>
-
-                  {!selected?.hideBuy && (
+                    <button
+                      className="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400"
+                      onClick={() => setOpen(false)}
+                    >
+                      {t.closeButton}
+                    </button>
                     <button
                       className="bg-[#42c249] text-white px-3 py-1 rounded hover:bg-[#359b3a]"
                       onClick={() => selected && handleBuy(selected)}
                     >
                       {t.buyButton}
                     </button>
-                  )}
-                </div>
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>

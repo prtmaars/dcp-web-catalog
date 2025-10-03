@@ -1,8 +1,10 @@
+import RecommendationSection from "@/components/recommendcard";
 import { getDictionary } from "@/i18n/getDictionary";
 import { notFound } from "next/navigation";
 import Hero from "@/components/hero";
 import Gallery from "@/components/gallery";
 import Link from "next/link";
+import { Recommendations } from "./recommendation";
 import { whatsNewData, getDefaultColor } from "./whatsnew";
 
 
@@ -10,6 +12,19 @@ export default async function HomePage({ params }: { params: { lang: "en" | "id"
   const dict = await getDictionary(params.lang);
 
   if (!dict) return notFound();
+
+  const lang = params.lang; // biar gampang dipakai di versi & desc
+
+  function handleDetail(item: any) {
+  // misalnya buka modal detail atau route ke /locomotives/[id]
+  console.log("Detail:", item);
+  }
+
+  function handleBuy(item: any) {
+    // misalnya redirect ke checkout atau external link
+    console.log("Buy:", item);
+  }
+
 
   const galleryImages = Array.from({ length: 60 }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
@@ -59,7 +74,7 @@ export default async function HomePage({ params }: { params: { lang: "en" | "id"
 
       {/* What's New */}
       <div className="max-w-5xl mx-auto px-6 py-10">
-        <h2 className="text-2xl font-semibold mb-6">{dict.home.whatsNew}</h2>
+        <h2 className="text-2xl font-bold mb-6">{dict.home.whatsNew}</h2>
         <div className="space-y-2">
           {whatsNewData.map((item, idx) => (
             <div
@@ -79,15 +94,18 @@ export default async function HomePage({ params }: { params: { lang: "en" | "id"
         </div>
       </div>
 
+      {/* Recommendations Section */}
+      <RecommendationSection />
+
       {/* Gallery */}
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl font-semibold mt-2 mb-2">{dict.home.gallery}</h2>
+        <h2 className="text-2xl font-bold mt-12 mb-4">{dict.home.gallery}</h2>
         <Gallery images={galleryImages} perPage={6} />
       </div>
 
       {/* Games Section */}
       <div className="max-w-5xl mx-auto px-6 py-0">
-        <h1 className="text-2xl font-bold mt-6 mb-4">{dict.home.gameTitle}</h1>
+        <h1 className="text-2xl font-bold mt-10 mb-4">{dict.home.gameTitle}</h1>
         <p className="text-gray-700 mb-8">{dict.home.gameDesc}</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -18,6 +18,7 @@ export default function LocomotivesPage() {
   const imagesPerPage = 1;
 
   const subcategories: { key: string; label: string }[] = [
+    { key: "Frankenstein Edition", label: t.edFrankenstein },
     { key: "Vintage Edition", label: t.edVintage },
     { key: "White and Blue Edition", label: t.edWnb },
     { key: "Red and Blue Edition", label: t.edRnb },
@@ -60,16 +61,30 @@ export default function LocomotivesPage() {
                 {locomotives
                   .filter((item: Locomotives) => item.subcat === sub.key)
                   .map((item: Locomotives) => (
-                    <div key={item.id} className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center">
+                    <div key={item.id} className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center relative">
+                      {item.bestseller && (
+                        <span className="absolute bottom-24 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                          Best Seller
+                        </span>
+                      )}
+
                       {item.img && (
-                        <img
-                          src={item.img}
-                          alt={item.title}
-                          className="w-full h-65 object-cover rounded-md mb-3"
-                        />
+                        <div className="relative w-full mb-3">
+                          <img
+                            src={item.img}
+                            alt={item.title}
+                            className="w-full h-65 object-cover rounded-md"
+                          />
+                          {item.version && (
+                            <span className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                              {item.version[lang as keyof typeof item.version]}
+                            </span>
+                          )}
+                        </div>
                       )}
                       <h2 className="text-lg font-semibold text-center">{item.title}</h2>
                       <p className="text-gray-600 text-center mb-3">{item.price}</p>
+
                       <div className="flex gap-2">
                         <button
                           className="bg-[#0589ee] text-white px-4 py-2 rounded-lg hover:bg-[#046ebe]"

@@ -21,6 +21,24 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2025/10/03",
+    type: "New Content",
+    description: {
+      id: "Rilis lokomotif CC 201 89 16 'Lokomotif Frankenstein'.",
+      en: "Release of the CC 201 89 16 'Frankenstein Locomotive'.",
+      ko: "CC 201 89 16 '프랑켄슈타인 기관차' 출시.",
+    },
+  },
+  {
+    date: "2025/09/28",
+    type: "New Content",
+    description: {
+      id: "Rilis kereta lodaya livery krem dan k1 eksis khusus user DCP.",
+      en: "Release of Lodaya with cream livery and K1 'eksis' for DCP users.",
+      ko: "DCP 사용자를 위해 크림색 도장과 K1 '엑시스'를 장착한 로다야 출시",
+    },
+  },
+  {
     date: "2025/08/27",
     type: "Info",
     description: {
