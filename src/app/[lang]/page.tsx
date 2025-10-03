@@ -1,4 +1,5 @@
 import RecommendationSection from "@/components/recommendcard";
+import { Recommendation } from "./recommendation";
 import { getDictionary } from "@/i18n/getDictionary";
 import { notFound } from "next/navigation";
 import Hero from "@/components/hero";
@@ -13,15 +14,13 @@ export default async function HomePage({ params }: { params: { lang: "en" | "id"
 
   if (!dict) return notFound();
 
-  const lang = params.lang; // biar gampang dipakai di versi & desc
+  const lang = params.lang;
 
-  function handleDetail(item: any) {
-  // misalnya buka modal detail atau route ke /locomotives/[id]
+  function handleDetail(item: Recommendation) {
   console.log("Detail:", item);
   }
 
-  function handleBuy(item: any) {
-    // misalnya redirect ke checkout atau external link
+  function handleBuy(item: Recommendation) {
     console.log("Buy:", item);
   }
 
