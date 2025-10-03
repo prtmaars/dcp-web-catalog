@@ -2,7 +2,7 @@
 
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { Recommendations } from "@/app/[lang]/recommendation";
+import { Recommendations, Recommendation } from "@/app/[lang]/recommendation";
 import { useParams } from "next/navigation";
 import { translations, LangType } from "@/i18n/translations";
 
@@ -12,18 +12,18 @@ export default function RecommendationSection() {
   const t = translations[lang].locomotives;
 
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState<any | null>(null);
+  const [selected, setSelected] = useState<Recommendation | null>(null);
   const [page, setPage] = useState(0);
 
   const imagesPerPage = 1;
 
-  const handleDetail = (item: any) => {
+  const handleDetail = (item: Recommendation) => {
     setSelected(item);
     setPage(0);
     setOpen(true);
   };
 
-  const handleBuy = (item: any) => {
+  const handleBuy = (item: Recommendation) => {
     const msg = encodeURIComponent(`${t.buyMessage} ${item.title}.`);
     window.open(`https://wa.me/62859106997891?text=${msg}`, "_blank");
   };
