@@ -30,6 +30,15 @@ export const whatsNewData: WhatsNewItem[] = [
     },
   },
   {
+    date: "2025/10/03",
+    type: "Info",
+    description: {
+      id: "Penyesuaian harga untuk konten lokomotif dan kereta.",
+      en: "Price adjustments for locomotive and train content.",
+      ko: "기관차 및 열차 콘텐츠 가격 조정.",
+    },
+  },
+  {
     date: "2025/09/28",
     type: "New Content",
     description: {
