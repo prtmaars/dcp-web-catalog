@@ -44,6 +44,12 @@ export default function RollingStocksPage() {
     (page + 1) * imagesPerPage
   );
 
+  const getDirectDownloadLink = (url: string) => {
+  const match = url.match(/\/file\/d\/(.*?)\//);
+  return match ? `https://drive.google.com/uc?export=download&id=${match[1]}` : url;
+  };
+
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-10">
       {/* Judul halaman */}
@@ -94,6 +100,18 @@ export default function RollingStocksPage() {
                   >
                     {t.detailButton}
                   </button>
+
+                {!item.hideDownload && item.downloadLink && (
+                  <button
+                    className="bg-[#42c249] text-white px-4 py-2 rounded-lg hover:bg-[#359b3a]"
+                    onClick={() => {
+                      const url = getDirectDownloadLink(item.downloadLink!);
+                      window.open(url, "_blank");
+                    }}
+                  >
+                    {t.downloadButton}
+                  </button>
+                )}
 
                   {!item.hideBuy && (
                     <button
@@ -208,6 +226,20 @@ export default function RollingStocksPage() {
                   >
                     {t.closeButton}
                   </button>
+
+                  {/* Download Button */}
+                  {!selected?.hideDownload && selected?.downloadLink && (
+                    <button
+                      className="bg-[#42c249] text-white px-3 py-1 rounded hover:bg-[#359b3a]"
+                      onClick={() => {
+                        if (!selected?.downloadLink) return;
+                        const url = getDirectDownloadLink(selected.downloadLink);
+                        window.open(url, "_blank");
+                      }}
+                    >
+                      {t.downloadButton}
+                    </button>
+                  )}
 
                   {!selected?.hideBuy && (
                     <button

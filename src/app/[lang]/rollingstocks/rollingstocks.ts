@@ -9,6 +9,8 @@ export interface RollingStock {
   price: string;
   version: MultiLangText;
   hideBuy: boolean;
+  hideDownload: boolean;
+  downloadLink?: string;  
   bestseller: boolean;
   subcat: string;
   img: string;
@@ -124,6 +126,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: true,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-kereta-wisata_orig.jpg",
@@ -212,6 +215,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-eksekutif_orig.jpg",
@@ -299,6 +303,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: true,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-new-image_orig.jpg",
@@ -394,6 +399,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-bisnis_orig.jpg",
@@ -450,6 +456,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-ekonomi_orig.jpg",
@@ -509,6 +516,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-satwa-orig_orig.jpg",
@@ -570,6 +578,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-kedinasan_orig.jpg",
@@ -615,6 +624,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-hospital.jpg",
@@ -649,6 +659,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: true,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-bagasi_orig.jpg",
@@ -719,6 +730,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: true,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-pembangkit-orig_orig.jpg",
@@ -770,6 +782,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: true,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/pack-kereta-penolong_orig.jpg",
@@ -825,6 +838,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: true,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/petani01.jpg",
@@ -849,6 +863,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: true,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/lodayakrem01.jpg",
@@ -874,6 +889,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 4.0 최종"
     },
     hideBuy: true,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/rollingstocks/eksis01.jpg",
@@ -899,6 +915,8 @@ export const rollingStocks: RollingStock[] = [
       ko: "베타 버전"
     },
     hideBuy: true,
+    hideDownload: false,
+    downloadLink: "https://drive.google.com/file/d/1iMFBQT6tmggHMp13hIbS3QBRqJkuisbI/view?usp=sharing",
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
     img: "/gallery/galeri04.jpg",
@@ -960,6 +978,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 1.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/kais_orig.jpg",
@@ -1053,6 +1072,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 1.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/rcl_orig.jpg",
@@ -1152,6 +1172,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 1.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/mcw302_orig.jpg",
@@ -1241,6 +1262,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 1.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/minnion_orig.jpg",
@@ -1351,6 +1373,7 @@ export const rollingStocks: RollingStock[] = [
       ko: "버전 1.0 최종"
     },
     hideBuy: false,
+    hideDownload: true,
     bestseller: false,
     subcat: "Kereta Rel Diesel",
     img: "/dieselmultipleunit/kds01.jpg",

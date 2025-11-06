@@ -50,6 +50,7 @@ export const translations = {
       detailButton: "Rincian",
       buyButton: "Beli",
       closeButton: "Tutup",
+      downloadButton: "Unduh",
       buyMessage: "Halo admin, Saya ingin membeli addons",
       edTraincars: "Kereta Tak Berpenggerak",
       edDMU: "Kereta Rel Diesel"
@@ -138,6 +139,7 @@ export const translations = {
       detailButton: "Details",
       buyButton: "Buy",
       closeButton: "Close",
+      downloadButton: "Download",
       buyMessage: "Hello admin, I would like to buy",
       edTraincars: "Train Cars",
       edDMU: "Diesel Multiple Unit"
@@ -225,6 +227,7 @@ export const translations = {
       detailButton: "상세",
       buyButton: "구매",
       closeButton: "닫기",
+      downloadButton: "다운로드",
       buyMessage: "관리자님, 사고 싶은게 있는데요",
       edTraincars: "열차",
       edDMU: "디젤 동차"
