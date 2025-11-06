@@ -26,7 +26,7 @@ export const objects: Objects[] = [
     title:"Semboyan Pack",
     price: "IDR 0",
     img: "/objects/semboyan05.jpg",
-    url: "https://linkvertise.com/719193/aR7SP6085379071?o=sharing",
+    url: "https://drive.google.com/file/d/1kYVbbUmB1SzeNCEmrH7unCD9du5mH7D3/view?usp=sharing",
     gallery: [
       "/objects/semboyan01.jpg",
       "/objects/semboyan02.jpg",
@@ -124,7 +124,7 @@ export const objects: Objects[] = [
     title:"Sleko Jembatan",
     price: "IDR 0",
     img: "/objects/sleko.jpg",
-    url: "https://linkvertise.com/719193/aWBYm6085379211?o=sharing",
+    url: "https://drive.google.com/file/d/1GHPtxqNnsOoZOEfXHKBNHzPiGR0HeyJN/view?usp=sharing",
     gallery: [
       "/objects/sleko.jpg",
     ],
@@ -146,7 +146,7 @@ export const objects: Objects[] = [
     title:"Sinyal Mekanik Pack",
     price: "IDR 0",
     img: "/objects/mekanik.jpg",
-    url: "https://linkvertise.com/719193/aMFGf6168966711?o=sharing",
+    url: "https://drive.google.com/file/d/1QHH4R4BaxOLqTPnZEFSipgNLSbKDdRLv/view?usp=sharing",
     gallery: [
       "/objects/mekanik.jpg",
     ],
@@ -180,7 +180,7 @@ export const objects: Objects[] = [
     title:"Sinyal Elektrik Pack",
     price: "IDR 0",
     img: "/objects/elektrik.jpg",
-    url: "https://linkvertise.com/719193/aA6mQ6324178157?o=sharing",
+    url: "https://drive.google.com/file/d/1OCDVd8CiVNWlYCGffcKObukPFGaPt5Ys/view?usp=sharing",
     gallery: [
       "/objects/elektrik.jpg",
     ],
@@ -202,13 +202,13 @@ export const objects: Objects[] = [
     title:"Bel Stasiun",
     price: "IDR 0",
     img: "/objects/belstasiun.jpg",
-    url: "https://linkvertise.com/719193/ap4iV6120380887?o=sharing",
+    url: "https://drive.google.com/file/d/1lGQ6Op7F9wONaO9l63q9G3HMByT8HedF/view?usp=sharing",
     extraUrls: [
-          { label: "Daop 1", url: "https://linkvertise.com/719193/apUzZ6120381463?o=sharing"},
-          { label: "Daop 2", url: "https://linkvertise.com/719193/aAEjm6120381369?o=sharing"},
-          { label: "Daop 3", url: "https://linkvertise.com/719193/aopqP6120381209?o=sharing"},
-          { label: "Daop 4", url: "https://linkvertise.com/719193/a1ls96120381113?o=sharing"},
-          { label: "Daop 5", url: "https://linkvertise.com/719193/a2QAp6120380975?o=sharing"},
+          { label: "Daop 1", url: "https://drive.google.com/file/d/1LoSmxtJOGoRC56RkrtwSLQOT6dGJIwtt/view?usp=sharing"},
+          { label: "Daop 2", url: "https://drive.google.com/file/d/1BK8rtSvt788LzZsUDHSftYODpF5U5bxl/view?usp=sharing"},
+          { label: "Daop 3", url: "https://drive.google.com/file/d/1T0253k0bK-_mgOxFlp1TdooszYPHjpUO/view?usp=sharing"},
+          { label: "Daop 4", url: "https://drive.google.com/file/d/1x8CNBh8KEuEXrSY1ot7yfckkFWJmAUJP/view?usp=sharing"},
+          { label: "Daop 5", url: "https://drive.google.com/file/d/1_LVqdA_ofOTduqJvVLnTIybuf5JzZRQF/view?usp=sharing"},
     ],
     gallery: [
       "/objects/belstasiun.jpg",
@@ -246,6 +246,40 @@ export const objects: Objects[] = [
             Dilarang membagi ulang, meng-upload ulang, ataupun hal lainnya yang bersifat menyebarkan konten ini.
             
             Password: DCP2019
+            `,
+      en: `english currently unavailable`,
+      ko: `한국어는 현재 사용할 수 없습니다`,
+    },
+  },
+  {
+    id: 6,
+    title:"Rel R-54 1067 mm",
+    price: "IDR 0",
+    img: "/objects/rel.jpg",
+    url: "https://drive.google.com/file/d/1fzrRg3kyApPgGO3H1QIj5lz1uHogH3K6/view?usp=sharing",
+    extraUrls: [
+          { label: "Rel R-54 V.1 (Polos)", url: "https://drive.google.com/file/d/16mbJK8Cgksb5o7Sb0yBQNIkwslgZeVIZ/view?usp=sharing"},
+          { label: "Rel R-54 V.2 (E-Clip)", url: "https://drive.google.com/file/d/1dKsP2C0vNcwWX-vBMLDcBujjj9xlWIPx/view?usp=sharing"},
+          { label: "Rel R-54 V.3 (DE-Clip)", url: "https://drive.google.com/file/d/1w8sgQdyPu0FlZ12jxyavxgSBwQBSpOIl/view?usp=sharing"},
+    ],
+    gallery: [
+      "/objects/rel.jpg",
+    ],
+    fullDesc: {
+      id: `Versi Android: Klik Tombol Unduhan Default (Tombol Unduh paling atas).
+
+            Versi PC:
+            1. Rel R-54 V.1 (Polos) dengan LOD.
+            2. Rel R-54 V.2 (E-Clip) dengan LOD.
+            3. Rel R-54 V.3 (DE-Clip) dengan LOD.
+
+            Addons ini bersifat Freeware.
+            Silakan gunakan di rute gratis, ataupun terbatas.
+            Untuk penggunaan pada rute berbayar, silakan hubungi kami.
+
+            Dilarang membagi ulang, meng-upload ulang, ataupun hal lainnya yang bersifat menyebarkan konten ini.
+            
+            Password: DCPR5420202025
             `,
       en: `english currently unavailable`,
       ko: `한국어는 현재 사용할 수 없습니다`,
