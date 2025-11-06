@@ -325,6 +325,13 @@ export const rollingStocks: RollingStock[] = [
       "/rollingstocks/newimage20.jpg",
       "/rollingstocks/newimage21.jpg",
       "/rollingstocks/newimage22.jpg",
+      "/gallery/galeri34.jpg",
+      "/gallery/galeri35.jpg",
+      "/gallery/galeri36.jpg",
+      "/gallery/galeri37.jpg",
+      "/gallery/galeri39.jpg",
+      "/gallery/galeri40.jpg",
+      "/gallery/galeri41.jpg",
     ],
     content: {
       id: `Isi Pack:
@@ -339,7 +346,10 @@ export const rollingStocks: RollingStock[] = [
             9. MP3 0 17 XX
             10. K1 0 09 05
             11. M1 0 08 03
-            12​. M1 0 82 10`,
+            12​. M1 0 82 10
+            13. K1 0 16 XX - Livery Fiksi Sindoro-Anggrek
+            14. M1 0 16 XX - Livery Fiksi Sindoro-Anggrek
+            15. P 0 16 XX - Livery Fiksi Sindoro-Anggrek`,
       en: `Pack Contents:
             1. K1 0 16 XX
             2. M1 0 16 XX
@@ -352,7 +362,10 @@ export const rollingStocks: RollingStock[] = [
             9. MP3 0 17 XX
             10. K1 0 09 05
             11. M1 0 08 03
-            12​. M1 0 82 10`,
+            12​. M1 0 82 10
+            13. K1 0 16 XX - Sindoro-Anggrek Fictional Livery
+            14. M1 0 16 XX - Sindoro-Anggrek Fictional Livery
+            15. P 0 16 XX - Sindoro-Anggrek Fictional Livery`,
       ko: `패키지 구성품:
             1. K1 0 16 XX
             2. M1 0 16 XX
@@ -365,7 +378,10 @@ export const rollingStocks: RollingStock[] = [
             9. MP3 0 17 XX
             10. K1 0 09 05
             11. M1 0 08 03
-            12. M1 0 82 10`,
+            12. M1 0 82 10
+            13. K1 0 16 XX - 신도로-앙그렉 가상 상징 
+            14. M1 0 16 XX - 신도로-앙그렉 가상 상징 
+            15. P 0 16 XX - 신도로-앙그렉 가상 상징`,
     },
     fullDesc: fullDescStandard1,
   },

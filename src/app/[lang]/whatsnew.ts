@@ -21,6 +21,24 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2025/11/07",
+    type: "Update",
+    description: {
+      id: "Penambahan kereta dengan liveri fiksi 'Sindoro-Anggrek' pada New Image Pack.",
+      en: "Addition of a train with the fictional 'Sindoro-Anggrek' livery to the New Image Pack.",
+      ko: "새로운 이미지 팩에 가상의 '신도로-앙그렉' 도장을 한 기차가 추가되었습니다.",
+    },
+  },
+  {
+    date: "2025/11/06",
+    type: "New Content",
+    description: {
+      id: "Rilis publik rel kereta tipe R-54.",
+      en: "Public release of R-54 type railway tracks.",
+      ko: "R-54형 철도 궤도 공개.",
+    },
+  },
+  {
     date: "2025/10/03",
     type: "New Content",
     description: {
@@ -44,7 +62,7 @@ export const whatsNewData: WhatsNewItem[] = [
     description: {
       id: "Rilis kereta lodaya livery krem dan k1 eksis khusus user DCP.",
       en: "Release of Lodaya with cream livery and K1 'eksis' for DCP users.",
-      ko: "DCP 사용자를 위해 크림색 도장과 K1 '엑시스'를 장착한 로다야 출시",
+      ko: "DCP 사용자를 위해 크림색 도장과 K1 '엑시스'를 장착한 로다야 출시.",
     },
   },
   {
