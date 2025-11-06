@@ -591,6 +591,40 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard1,
   },
   {
+    title:"Rail Hospital Pack",
+    price: "IDR 10.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
+    hideBuy: false,
+    bestseller: false,
+    subcat: "Kereta Tak Berpenggerak",
+    img: "/rollingstocks/pack-hospital.jpg",
+    gallery: [
+      "/rollingstocks/pack-hospital.jpg",
+    ],
+    content: {
+      id: `Isi Pack:
+            1. K1 0 64 20 - Rail Hospital
+            2. K1 0 66 05 - Rail Hospital
+            3. K1 0 66 15 - Rail Hospital
+            4. K1 0 67 06 - Rail Hospital`,
+      en: `Pack Contents:
+            1. K1 0 64 20 - Rail Hospital
+            2. K1 0 66 05 - Rail Hospital
+            3. K1 0 66 15 - Rail Hospital
+            4. K1 0 67 06 - Rail Hospital`,
+      ko: `패키지 구성:
+            1. K1 0 64 20 - 철도 병원
+            2. K1 0 66 05 - 철도 병원
+            3. K1 0 66 15 - 철도 병원
+            4. K1 0 67 06 - 철도 병원`,
+    },
+    fullDesc: fullDescStandard1,
+  },
+  {
     title:"Bagasi Pack",
     price: "IDR 0 (Bonus)",
     version: {
