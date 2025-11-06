@@ -21,6 +21,15 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2025/11/08",
+    type: "New Content",
+    description: {
+      id: "Rilis publik stainless steel gen 1 (versi beta).",
+      en: "Public release of stainless steel gen 1 (beta version).",
+      ko: "스테인리스 스틸 1세대(베타 버전) 공개.",
+    },
+  },
+  {
     date: "2025/11/07",
     type: "Update",
     description: {
