@@ -891,6 +891,67 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard2,
   },
   {
+    title:"Stainless Steel Gen 1 [BETA]",
+    price: "IDR 0 (Free)",
+    version: {
+      id: "Versi Beta",
+      en: "Beta Version",
+      ko: "베타 버전"
+    },
+    hideBuy: true,
+    bestseller: false,
+    subcat: "Kereta Tak Berpenggerak",
+    img: "/gallery/galeri04.jpg",
+    gallery: [
+      "/gallery/galeri04.jpg",
+      "/gallery/galeri05.jpg",
+      "/gallery/galeri10.jpg",
+      "/gallery/galeri11.jpg",
+      "/rollingstocks/ssgen1lux.jpg",
+      "/rollingstocks/ssgen1k1.jpg",
+      "/rollingstocks/ssgen1k3.jpg",
+      "/rollingstocks/ssgen1m1.jpg",
+      "/rollingstocks/ssgen1p.jpg",
+    ],
+    content: {
+      id: `Isi Pack:
+            1. K1 0 18 01 - Eksekutif
+            2. K1 0 18 61 - Luxury
+            3. K3 0 18 01 - Premium
+            4. M1 0 18 01 - Restorasi
+            5. P 0 18 01 - Pembangkit`,
+      en: `Pack Contents:
+            1. K1 0 18 01 - Executive Class
+            2. K1 0 18 61 - Luxury Class
+            3. K3 0 18 01 - Premium Class
+            4. M1 0 18 01 - Dinning Car
+            5. P 0 18 01 - Power Car`,
+      ko: `팩 구성:
+            1. K1 0 18 01 - 이그제큐티브 클래스
+            2. K1 0 18 61 - 럭셔리 클래스
+            3. K3 0 18 01 - 프리미엄 클래스
+            4. M1 0 18 01 - 다이닝카
+            5. P 0 18 01 - 파워카`,
+    },
+    fullDesc: {
+      id: `Konten ini masih versi beta, belum ada skrip, belum ada rantai, s21, dll.
+            Dependencies sudah disertakan semua.
+            Bogie masih menggunakan K5, jika ingin K10 silahkan diganti sendiri.
+
+            DILARANG MENYEBARLUASKAN KONTEN INI DENGAN CARA DAN BENTUK APAPUN!`,
+      en: `This content is still in beta, with no scripts, no chains, no S21, etc.
+            All dependencies are included.
+            The bogie still uses K5; if you prefer K10, please change it yourself.
+
+            DISTRIBUTION OF THIS CONTENT IN ANY MANNER OR FORM IS PROHIBITED!`,
+      ko: `이 콘텐츠는 아직 베타 버전이며 스크립트, 체인, S21 등이 없습니다.
+            모든 종속성이 포함되어 있습니다.
+            보기는 여전히 K5를 사용합니다. K10을 선호하시는 경우 직접 변경해 주세요.
+
+            이 콘텐츠는 어떠한 방식이나 형태로든 배포하는 것을 금지합니다!`,
+    },
+  },
+  {
     title:"Kereta Inspeksi Pack",
     price: "IDR 10.000",
     version: {
