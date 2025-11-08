@@ -53,7 +53,8 @@ export const translations = {
       downloadButton: "Unduh",
       buyMessage: "Halo admin, Saya ingin membeli addons",
       edTraincars: "Kereta Tak Berpenggerak",
-      edDMU: "Kereta Rel Diesel"
+      edDMU: "Kereta Rel Diesel",
+      edGerbong: "Gerbong Barang"
     },
     objects: {
       pageTitle: "Objek",
@@ -142,7 +143,8 @@ export const translations = {
       downloadButton: "Download",
       buyMessage: "Hello admin, I would like to buy",
       edTraincars: "Train Cars",
-      edDMU: "Diesel Multiple Unit"
+      edDMU: "Diesel Multiple Unit",
+      edGerbong: "Freight Train"
     },
     objects: {
       pageTitle: "Objects",
@@ -230,7 +232,8 @@ export const translations = {
       downloadButton: "다운로드",
       buyMessage: "관리자님, 사고 싶은게 있는데요",
       edTraincars: "열차",
-      edDMU: "디젤 동차"
+      edDMU: "디젤 동차",
+      edGerbong: "화물 열차"
     },
     objects: {
       pageTitle: "객체",

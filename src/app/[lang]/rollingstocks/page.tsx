@@ -20,6 +20,7 @@ export default function RollingStocksPage() {
   const subcategories: { key: string; label: string }[] = [
     { key: "Kereta Tak Berpenggerak", label: t.edTraincars },
     { key: "Kereta Rel Diesel", label: t.edDMU },
+    { key: "Gerbong Barang", label: t.edGerbong },
   ];
 
   const grouped = rollingStocks.reduce((acc: Record<string, typeof rollingStocks>, item) => {

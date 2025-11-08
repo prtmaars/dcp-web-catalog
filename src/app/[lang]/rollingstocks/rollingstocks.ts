@@ -919,7 +919,7 @@ export const rollingStocks: RollingStock[] = [
     downloadLink: "https://drive.google.com/file/d/1iMFBQT6tmggHMp13hIbS3QBRqJkuisbI/view?usp=sharing",
     bestseller: false,
     subcat: "Kereta Tak Berpenggerak",
-    img: "/gallery/galeri04.jpg",
+    img: "/rollingstocks/ssgen1full.jpg",
     gallery: [
       "/gallery/galeri04.jpg",
       "/gallery/galeri05.jpg",
@@ -1423,6 +1423,58 @@ export const rollingStocks: RollingStock[] = [
             2. 중간 폴리
             3. 자동 야간 모드
             4. 신호 26 & 27`,
+    },
+  },
+  {
+    title:"Gerbong Datar (PPC) 42 Ton",
+    price: "IDR 0 (Free)",
+    version: {
+      id: "Versi Beta",
+      en: "Beta Version",
+      ko: "베타 버전"
+    },
+    hideBuy: true,
+    hideDownload: false,
+    downloadLink: "https://drive.google.com/file/d/1_K4bFUNAs3E-DvdbZxLRTIpujI-Ib0Dn/view?usp=sharing",
+    bestseller: false,
+    subcat: "Gerbong Barang",
+    img: "/rollingstocks/gerbongdatar.jpg",
+    gallery: [
+      "/rollingstocks/gerbongdatar.jpg",
+    ],
+    content: {
+      id: `Isi Pack:
+            1. GD 42 11 42 SDT - Livery Hitam
+            2. GD 42 11 245 JAKG - Livery Biru
+            3. GD 42 11 252 BD - Livery Kuning
+            4. GD 42 11 341 MA - Livery Hijau`,
+      en: `Pack Contents:
+            1. GD 42 11 42 SDT - Black Livery
+            2. GD 42 11 245 JAKG - Blue Livery
+            3. GD 42 11 252 BD - Yellow Livery
+            4. GD 42 11 341 MA - Green Livery`,
+      ko: `팩 구성:
+            1. GD 42 11 42 SDT - 검은색 도장
+            2. GD 42 11 245 JAKG - 파란색 도장
+            3. GD 42 11 252 BD - 노란색 도장
+            4. GD 42 11 341 MA - 녹색 도장`,
+    },
+    fullDesc: {
+      id: `Konten ini masih versi beta, belum ada skrip, belum ada rantai, s21, dll.
+            Dependencies sudah disertakan semua.
+            Tersedia komoditi peti kemas ukuran 20ft dan 40ft.
+
+            DILARANG MENYEBARLUASKAN KONTEN INI DENGAN CARA DAN BENTUK APAPUN!`,
+      en: `This content is still in beta, with no scripts, no chains, no S21, etc.
+            All dependencies are included.
+            Commodity containers available in sizes 20ft and 40ft.
+
+            DISTRIBUTION OF THIS CONTENT IN ANY MANNER OR FORM IS PROHIBITED!`,
+      ko: `이 콘텐츠는 아직 베타 버전이며 스크립트, 체인, S21 등이 없습니다.
+            모든 종속성이 포함되어 있습니다.
+            20피트 및 40피트 크기의 상품 컨테이너 제공.
+
+            이 콘텐츠는 어떠한 방식이나 형태로든 배포하는 것을 금지합니다!`,
     },
   },
   

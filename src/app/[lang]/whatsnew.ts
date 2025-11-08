@@ -21,6 +21,15 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2025/11/09",
+    type: "New Content",
+    description: {
+      id: "Rilis publik gerbong datar (PPC) 42 ton (versi beta).",
+      en: "Public release of 42 ton flatcar (PPC) (beta version).",
+      ko: "42톤 평차(PPC) 공개(베타 버전).",
+    },
+  },
+  {
     date: "2025/11/08",
     type: "New Content",
     description: {
