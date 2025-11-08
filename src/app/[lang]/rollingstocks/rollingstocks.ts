@@ -1477,5 +1477,48 @@ export const rollingStocks: RollingStock[] = [
             이 콘텐츠는 어떠한 방식이나 형태로든 배포하는 것을 금지합니다!`,
     },
   },
+  {
+    title:"Gerbong Ketel (KKW) 30 Ton",
+    price: "IDR 0 (Free)",
+    version: {
+      id: "Versi Beta",
+      en: "Beta Version",
+      ko: "베타 버전"
+    },
+    hideBuy: true,
+    hideDownload: false,
+    downloadLink: "https://drive.google.com/file/d/1tIXnUUOl_vJn9GnZbiP7NAlnrDVpCxuv/view?usp=sharing",
+    bestseller: false,
+    subcat: "Gerbong Barang",
+    img: "/rollingstocks/ketel.jpg",
+    gallery: [
+      "/rollingstocks/ketel.jpg",
+    ],
+    content: {
+      id: `Isi Pack:
+            1. GK 30 84 08 MA
+            2. GK 30 84 08 MA - Update`,
+      en: `Pack Contents:
+            1. GK 30 84 08 MA
+            2. GK 30 84 08 MA - Update`,
+      ko: `팩 구성:
+            1. GK 30 84 08 MA
+            2. GK 30 84 08 MA - 업데이트`,
+    },
+    fullDesc: {
+      id: `Konten ini masih versi beta, belum ada skrip, belum ada rantai, s21, dll.
+            Dependencies sudah disertakan semua.
+
+            DILARANG MENYEBARLUASKAN KONTEN INI DENGAN CARA DAN BENTUK APAPUN!`,
+      en: `This content is still in beta, with no scripts, no chains, no S21, etc.
+            All dependencies are included.
+
+            DISTRIBUTION OF THIS CONTENT IN ANY MANNER OR FORM IS PROHIBITED!`,
+      ko: `이 콘텐츠는 아직 베타 버전이며 스크립트, 체인, S21 등이 없습니다.
+            모든 종속성이 포함되어 있습니다.
+
+            이 콘텐츠는 어떠한 방식이나 형태로든 배포하는 것을 금지합니다!`,
+    },
+  },
   
 ];
