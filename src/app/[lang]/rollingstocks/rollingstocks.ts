@@ -508,6 +508,71 @@ export const rollingStocks: RollingStock[] = [
     fullDesc: fullDescStandard1,
   },
   {
+    title:"Lokal Pack",
+    price: "IDR 15.000",
+    version: {
+      id: "Versi 4.0 FINAL",
+      en: "Version 4.0 FINAL",
+      ko: "버전 4.0 최종"
+    },
+    hideBuy: false,
+    hideDownload: true,
+    bestseller: false,
+    subcat: "Kereta Tak Berpenggerak",
+    img: "/rollingstocks/lokalpack.jpg",
+    gallery: [
+      "/rollingstocks/lokal01.jpeg",
+      "/rollingstocks/lokal02.jpeg",
+      "/rollingstocks/lokal03.jpeg",
+      "/rollingstocks/lokal04.jpeg",
+      "/rollingstocks/lokal05.jpeg",
+      "/rollingstocks/lokal06.jpg",
+      "/rollingstocks/lokal07.jpg",
+      "/rollingstocks/lokal08.jpg",
+      "/rollingstocks/lokal09.jpg",
+      "/rollingstocks/lokal10.jpg",
+    ],
+    content: {
+      id: `Isi Pack:
+            1. K3 0 09 XX - V1 K Mini
+            2. K3 0 09 XX - V2 K Mini
+            3. K3 0 09 XX - V1 N Mini
+            4. K3 0 09 XX - V2 N Mini
+            5. KMP3 0 09 XX - Mini
+            6. K3 ex MCW 301
+            7. K3 ex MCW 302
+            8. KP3 ex MCW 301
+            9. KP3 ex MCW 302
+            10. B ex MCW 302 V.1
+            11. B ex MCW 302 V.2`,
+      en: `Pack Contents:
+            1. K3 0 09 XX - V1 K Mini
+            2. K3 0 09 XX - V2 K Mini
+            3. K3 0 09 XX - V1 N Mini
+            4. K3 0 09 XX - V2 N Mini
+            5. KMP3 0 09 XX - Mini
+            6. K3 ex MCW 301
+            7. K3 ex MCW 302
+            8. KP3 ex MCW 301
+            9. KP3 ex MCW 302
+            10. B ex MCW 302 V.1
+            11. B ex MCW 302 V.2`,
+      ko: `패키지 구성품:
+            1. K3 0 09 XX - V1 K Mini
+            2. K3 0 09 XX - V2 K Mini
+            3. K3 0 09 XX - V1 N Mini
+            4. K3 0 09 XX - V2 N Mini
+            5. KMP3 0 09 XX - Mini
+            6. K3 ex MCW 301
+            7. K3 ex MCW 302
+            8. KP3 ex MCW 301
+            9. KP3 ex MCW 302
+            10. B ex MCW 302 V.1
+            11. B ex MCW 302 V.2`,
+    },
+    fullDesc: fullDescStandard1,
+  },
+  {
     title:"Satwa Pack [SPECIAL EDITION]",
     price: "IDR 15.000",
     version: {

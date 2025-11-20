@@ -21,6 +21,15 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2025/11/20",
+    type: "New Content",
+    description: {
+      id: "Rilis publik Lokal Pack.",
+      en: "Public release of Local Pack.",
+      ko: "로컬 팩을 공개합니다.",
+    },
+  },
+  {
     date: "2025/11/10",
     type: "New Content",
     description: {
