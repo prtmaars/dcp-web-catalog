@@ -21,6 +21,15 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2026/02/07",
+    type: "Update",
+    description: {
+      id: "Penambahan lokomotif dengan livery White and Blue baru pada lokomotif CC 203 02 03.",
+      en: "Addition of locomotives with new White and Blue livery on CC 203 02 03 locomotives.",
+      ko: "CC 203 02 03 기관차에 새로운 흰색과 파란색 도색이 추가되었습니다.",
+    },
+  },
+  {
     date: "2025/11/20",
     type: "New Content",
     description: {
