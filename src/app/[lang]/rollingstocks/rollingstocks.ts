@@ -136,6 +136,7 @@ export const rollingStocks: RollingStock[] = [
       "/rollingstocks/wisata02.jpg",
       "/rollingstocks/wisata03.jpg",
       "/rollingstocks/wisata04.jpg",
+      "/rollingstocks/wisata05.jpg",
     ],
     content: {
       id: `Isi Pack:
@@ -485,6 +486,7 @@ export const rollingStocks: RollingStock[] = [
       "/rollingstocks/ekonomi12.jpg",
       "/rollingstocks/ekonomi13.jpg",
       "/rollingstocks/ekonomi14.jpg",
+      "/rollingstocks/ekonomi15.jpg",
     ],
     content: {
       id: `Isi Pack:
@@ -495,7 +497,8 @@ export const rollingStocks: RollingStock[] = [
             5. KMP3 0 09 XX
             6. K3 0 10 XX - K
             7. K3 0 10 XX - DIFABEL
-            8. MP3 0 10 XX`,
+            8. MP3 0 10 XX
+            9. K3 0 10 XX - Modifikasi New Generation`,
       en: `Pack Contents:
             1. K3 0 09 XX - V1 K
             2. K3 0 09 XX - V2 K
@@ -504,7 +507,8 @@ export const rollingStocks: RollingStock[] = [
             5. KMP3 0 09 XX
             6. K3 0 10 XX - K
             7. K3 0 10 XX - DISABLED
-            8. MP3 0 10 XX`,
+            8. MP3 0 10 XX
+            9. K3 0 10 XX - New Generation Modification`,
       ko: `패키지 구성품:
             1. K3 0 09 XX - V1 K
             2. K3 0 09 XX - V2 K
@@ -513,7 +517,8 @@ export const rollingStocks: RollingStock[] = [
             5. KMP3 0 09 XX
             6. K3 0 10 XX - K
             7. K3 0 10 XX - 디파벨
-            8. MP3 0 10 XX`,
+            8. MP3 0 10 XX
+            9. K3 0 10 XX - 차세대 개조`,
     },
     fullDesc: fullDescStandard1,
   },
