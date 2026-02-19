@@ -21,6 +21,33 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2026/02/22",
+    type: "Update",
+    description: {
+      id: "Penambahan P 0 98 02, P 0 94 01, dan P 0 65 02 pada Kereta Pembangkit Pack.",
+      en: "Addition of P 0 98 02, P 0 94 01, and P 0 65 02 to the Kereta Pembangkit Pack.",
+      ko: "Kereta Pembangkit Pack에 P 0 98 02, P 0 94 01 및 P 0 65 02 추가.",
+    },
+  },
+  {
+    date: "2026/02/21",
+    type: "Update",
+    description: {
+      id: "Penambahan M1 0 68 03 dan P 0 65 02 pada Kereta Wisata Pack.",
+      en: "Addition of M1 0 68 03 and P 0 65 02 to the Kereta Wisata Pack.",
+      ko: "Kereta Wisata Pack에 M1 0 68 03 및 P 0 65 02 추가.",
+    },
+  },
+  {
+    date: "2026/02/20",
+    type: "New Content",
+    description: {
+      id: "Rilis ulang lokomotif edisi All-in-One.",
+      en: "Re-release of the All-in-One edition locomotive.",
+      ko: "올인원 에디션 기관차가 재출시되었습니다.",
+    },
+  },
+  {
     date: "2026/02/11",
     type: "Info",
     description: {

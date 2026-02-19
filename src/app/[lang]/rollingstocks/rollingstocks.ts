@@ -132,6 +132,10 @@ export const rollingStocks: RollingStock[] = [
     img: "/rollingstocks/pack-kereta-wisata_orig.jpg",
     gallery: [
       "/rollingstocks/pack-kereta-wisata_orig.jpg",
+      "/rollingstocks/wisata01.jpg",
+      "/rollingstocks/wisata02.jpg",
+      "/rollingstocks/wisata03.jpg",
+      "/rollingstocks/wisata04.jpg",
     ],
     content: {
       id: `Isi Pack:
@@ -156,7 +160,9 @@ export const rollingStocks: RollingStock[] = [
             19. K1 0 91 02 - PRIORITY 10 
             20. K1 0 91 03 - PRIORITY 11 
             21. K1 0 01 XX - PANORAMIC
-            22​. T1 0 08 XX - COMPARTMENT SUITES`,
+            22​. T1 0 08 XX - COMPARTMENT SUITES
+            23​. M1 0 68 03 - JAKALALANA
+            24​. P 0 65 02 - JAKALALANA`,
       en: `Pack Contents:
             1. SI 0 67 01 - NUSANTARA
             2. SI 0 67 02 - BALI
@@ -179,7 +185,9 @@ export const rollingStocks: RollingStock[] = [
             19. K1 0 91 02 - PRIORITY 10 
             20. K1 0 91 03 - PRIORITY 11 
             21. K1 0 01 XX - PANORAMIC 
-            22​. T1 0 08 XX - COMPARTMENT SUITES`,
+            22​. T1 0 08 XX - COMPARTMENT SUITES
+            23​. M1 0 68 03 - JAKALALANA
+            24​. P 0 65 02 - JAKALALANA`,
       ko: `팩 내용: 
             1. SI 0 67 01 - 누산타라 
             2. SI 0 67 02 - 발리 
@@ -202,7 +210,9 @@ export const rollingStocks: RollingStock[] = [
             19. K1 0 91 02 - 우선권 10
             20. K1 0 91 03 - 우선권 11
             21. K1 0 01 XX - 파노라마
-            22. T1 0 08 XX - 컴파트먼트 스위트`,
+            22. T1 0 08 XX - 컴파트먼트 스위트
+            23​. M1 0 68 03 - 자칼랄라나
+            24​. P 0 65 02 - 자칼랄라나`,
     },
     fullDesc: fullDescStandard2,
   },
@@ -806,35 +816,47 @@ export const rollingStocks: RollingStock[] = [
       "/rollingstocks/pembangkit04.jpg",
       "/rollingstocks/pembangkit05.jpg",
       "/rollingstocks/pembangkit06.jpg",
+      "/rollingstocks/pembangkit07.jpg",
+      "/rollingstocks/pembangkit08.jpg",
+      "/rollingstocks/pembangkit09.jpg",
     ],
     content: {
       id: `Bonus konten ini bisa didapatkan setelah membeli 5 pack kereta.
       
           Isi Pack:
             1. P 0 64 02
-            2. P 0 67 05
-            3. P 0 68 10
-            4. P 0 68 14
-            5. P 0 78 03
-            6. P 0 78 07`,
+            2. P 0 65 02
+            3. P 0 67 05
+            4. P 0 68 10
+            5. P 0 68 14
+            6. P 0 78 03
+            7. P 0 78 07
+            8. P 0 94 01
+            9. P 0 98 02`,
       en: `This bonus content can be obtained after purchasing 5 train packs.
 
           Pack Contents:
             1. P 0 64 02
-            2. P 0 67 05
-            3. P 0 68 10
-            4. P 0 68 14
-            5. P 0 78 03
-            6. P 0 78 07`,
+            2. P 0 65 02
+            3. P 0 67 05
+            4. P 0 68 10
+            5. P 0 68 14
+            6. P 0 78 03
+            7. P 0 78 07
+            8. P 0 94 01
+            9. P 0 98 02`,
       ko: `이 보너스 콘텐츠는 기차 팩 5개를 구매하면 획득할 수 있습니다.
 
           팩 구성:
             1. P 0 64 02
-            2. P 0 67 05
-            3. P 0 68 10
-            4. P 0 68 14
-            5. P 0 78 03
-            6. P 0 78 07`,
+            2. P 0 65 02
+            3. P 0 67 05
+            4. P 0 68 10
+            5. P 0 68 14
+            6. P 0 78 03
+            7. P 0 78 07
+            8. P 0 94 01
+            9. P 0 98 02`,
     },
     fullDesc: fullDescStandard2,
   },
