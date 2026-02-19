@@ -228,20 +228,24 @@ export const fullDescVersion2 = {
             - Terdapat animasi berkibar.
             - Arah bendera bisa diputar sesuai kemauan.
 
-            18. Cap Depo Lokomotif
+            18. Plat Nomor Lokomotif
+            - Posisi bisa digeser atau dinaik/turunkan.
+            - Nomor bisa diatur sesuai kemauan perdigitnya.
+
+            19. Cap Depo Lokomotif
             - Posisi bisa digeser atau dinaik/turunkan.
             - Terdapat 15 pilihan depo induk lokomotif.
 
-            19. Informasi Semboyan.
+            20. Informasi Semboyan.
             - Terdapat deskripsi untuk informasi semboyan (S.20 - S.27 dan S.45).
             - Bisa disembunyikan/dimunculkan.
 
-            20. Detail
+            21. Detail
             - High detail eksterior.
             - High detail kabin interior.
             - High detail bogie dan coupler.
 
-            21. Dependencies
+            22. Dependencies
             - Seluruh dependencies disertakan lengkap (tidak akan missdep kalau pasangnya benar).
             - Enginesound menggunakan milik IVRD.
             - Hornsound menggunakan milik IVRD.
@@ -349,25 +353,29 @@ export const fullDescVersion2 = {
             - There are 4 flag display positions.
             - There is a waving animation.
             - The flag direction can be rotated as desired.
+            
+            18. Locomotive License Plate
+            - The position can be moved or raised/lowered.
+            - The number can be adjusted according to your preference per digit.
 
-            18. Locomotive Depot Stamp
-            - The position can be shifted or raised/lowered.
+            19. Locomotive Depot Stamp
+            - The position can be moved or raised/lowered.
             - There are 15 main locomotive depot options.
 
-            19. Signalling Information.
-            - There is a description for the Signalling information (S.20 - S.27 and S.45).
-            - Can be hidden/displayed.
+            20. Motto Information.
+            - There is a description for the motto information (S.20 - S.27 and S.45).
+            - Can be hidden/unhidden.
 
-            20. Details
-            - High-detail exterior.
-            - High-detail interior cabin.
-            - High-detail bogie and coupler.
+            21. Details
+            - Highly detailed exterior.
+            - Highly detailed interior cabin.
+            - Highly detailed bogie and coupler.
 
-            21. Dependencies
-            - All dependencies are included (no missdep if installed correctly).
-            - Enginesound uses IVRD's.
-            - Hornsound uses IVRD's.
-            - A PDF tutorial and video tutorial on installing the add-ons are provided.
+            22. Dependencies
+            - All dependencies are included (will not missdep if installed correctly).
+            - Engine sound is from IVRD.
+            - Horn sound is from IVRD.
+            - A PDF tutorial file and a video tutorial are provided for installing add-ons.
           `,
       ko: `기관차 기능:
 
@@ -471,25 +479,29 @@ export const fullDescVersion2 = {
             - 깃발 표시 위치는 4가지입니다.
             - 깃발 흔들기 애니메이션이 있습니다.
             - 깃발 방향을 원하는 대로 회전할 수 있습니다.
+            
+            18. 기관차 번호판
+          - 위치를 이동하거나 위아래로 조절할 수 있습니다.
+          - 숫자는 각 자릿수별로 원하는 대로 조정할 수 있습니다.
 
-            18. 기관차 차고지 스탬프
-            - 위치를 이동하거나 올리거나 내릴 수 있습니다.
-            - 주요 기관차 차고지 옵션은 15가지입니다.
+          19. 기관차 차고 스탬프
+          - 위치를 이동하거나 위아래로 조절할 수 있습니다.
+          - 15가지 주요 기관차 차고 스탬프 옵션이 있습니다.
 
-            19. 신호 정보
-            - 신호 정보(S.20 - S.27 및 S.45)에 대한 설명이 있습니다.
-            - 숨기거나 표시할 수 있습니다.
+          20. 표어 정보
+          - 표어 정보에 대한 설명이 있습니다(20~27페이지 및 45페이지).
+          - 숨기거나 표시할 수 있습니다.
 
-            20. 세부 정보
-            - 고세밀 외관
-            - 고세밀 내부 객실
-            - 고세밀 보기 및 연결기
+          21. 세부 사항
+          - 매우 정교한 외관.
+          - 매우 정교한 내부 기관실.
+          - 매우 정교한 보기 및 연결기.
 
-            21. 종속성
-            - 모든 종속성이 포함되어 있습니다(정상적으로 설치된 경우 오류 없음).
-            - Enginesound는 IVRD를 사용합니다.
-            - Hornsound는 IVRD를 사용합니다.
-            - 애드온 설치에 대한 PDF 튜토리얼과 비디오 튜토리얼이 제공됩니다.
+          22. 종속성
+          - 모든 종속성이 포함되어 있습니다(올바르게 설치하면 종속성 누락 없음).
+          - 엔진 사운드는 IVRD에서 가져왔습니다.
+          - 경적 사운드는 IVRD에서 가져왔습니다.
+          - 애드온 설치를 위한 PDF 튜토리얼 파일과 비디오 튜토리얼이 제공됩니다.
             `,
     };
 
@@ -861,12 +873,16 @@ export const Locomotivess: Locomotives[] = [
       ko: "버전 1.0"
     },
     subcat: "White and Blue Edition",
-    img: "/locomotives/2030203.png",
+    img: "/locomotives/2030203-5.jpg",
     gallery: [
       "/locomotives/2030203.png",
       "/locomotives/2030203-2.png",
       "/locomotives/2030203-3.png",
       "/locomotives/2030203-4.png",
+      "/locomotives/2030203-5.jpg",
+      "/locomotives/2030203-6.jpg",
+      "/locomotives/2030203-7.jpg",
+      "/locomotives/2030203-8.jpg",
       "/locomotives/parade.png",
     ],
     fullDesc: fullDescStandard,
