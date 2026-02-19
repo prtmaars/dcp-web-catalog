@@ -5,9 +5,7 @@ import { notFound } from "next/navigation";
 import Hero from "@/components/hero";
 import Gallery from "@/components/gallery";
 import Link from "next/link";
-import { Recommendations } from "./recommendation";
-import { whatsNewData, getDefaultColor } from "./whatsnew";
-
+import WhatsNewSection from "./whatsnewsection";
 
 export default async function HomePage({ params }: { params: { lang: "en" | "id" | "ko" } }) {
   const dict = await getDictionary(params.lang);
@@ -72,26 +70,7 @@ export default async function HomePage({ params }: { params: { lang: "en" | "id"
       />
 
       {/* What's New */}
-      <div className="max-w-5xl mx-auto px-6 py-10">
-        <h2 className="text-2xl font-bold mb-6">{dict.home.whatsNew}</h2>
-        <div className="space-y-2">
-          {whatsNewData.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex items-start text-gray-700 border-b pb-2"
-            >
-              <span className="w-28 font-mono text-sm">{item.date}</span>
-              <span
-                className="ml-1 font-semibold"
-                style={{ color: getDefaultColor(item.type) }}
-              >
-                [{item.type}]
-              </span>
-              <span className="ml-2">{item.description[params.lang]}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      <WhatsNewSection lang={params.lang} />
 
       {/* Recommendations Section */}
       <RecommendationSection />
