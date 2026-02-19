@@ -21,6 +21,15 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2026/02/19",
+    type: "Update",
+    description: {
+      id: "TEST.",
+      en: "TEST.",
+      ko: "TEST.",
+    },
+  },
+  {
     date: "2025/11/20",
     type: "New Content",
     description: {
