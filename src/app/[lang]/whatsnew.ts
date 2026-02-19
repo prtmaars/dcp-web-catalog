@@ -33,9 +33,9 @@ export const whatsNewData: WhatsNewItem[] = [
     date: "2026/02/21",
     type: "Update",
     description: {
-      id: "Penambahan M1 0 68 03 dan P 0 65 02 pada Kereta Wisata Pack.",
-      en: "Addition of M1 0 68 03 and P 0 65 02 to the Kereta Wisata Pack.",
-      ko: "Kereta Wisata Pack에 M1 0 68 03 및 P 0 65 02 추가.",
+      id: "Penambahan kereta restorasi dan pembangkit 'Jakalalana' pada Kereta Wisata Pack.",
+      en: "Addition of the 'Jakalalana' restoration and generator train to the Kereta Wisata Pack.",
+      ko: "Kereta Wisata Pack에 'Jakalalana' 복원 및 발전기 열차가 추가되었습니다.",
     },
   },
   {
