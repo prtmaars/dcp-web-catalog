@@ -21,12 +21,30 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
-    date: "2026/02/19",
+    date: "2026/02/11",
+    type: "Info",
+    description: {
+      id: "Rilis saluran whatsapp DCP Official.",
+      en: "DCP Official whatsapp channel release.",
+      ko: "DCP Official 왓츠앱 채널 출시.",
+    },
+  },
+  {
+    date: "2026/02/10",
     type: "Update",
     description: {
-      id: "TEST.",
-      en: "TEST.",
-      ko: "TEST.",
+      id: "Penambahan fitur kombinasi plat nomor pada CC 201 89 16.",
+      en: "Added combination license plate feature on CC 201 89 16.",
+      ko: "CC 201 89 16 모델에 조합 번호판 기능이 추가되었습니다.",
+    },
+  },
+  {
+    date: "2026/02/07",
+    type: "Update",
+    description: {
+      id: "Penambahan lokomotif dengan livery baru pada CC 203 02 03.",
+      en: "Addition of locomotives with new livery on CC 203 02 03.",
+      ko: "CC 203 02 03 노선에 새로운 도색을 적용한 기관차가 추가되었습니다.",
     },
   },
   {
