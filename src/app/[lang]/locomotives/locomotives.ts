@@ -4,17 +4,34 @@ export interface MultiLangText {
   ko: string;
 }
 
+export type ProductType = "standalone" | "all-in-one";
+export type ProductVersion = "V.1" | "V.2";
+export type ProductStatus = "final" | "discontinued";
+
+
+export type LocomotiveEdition =
+  | "All-in-One Edition"
+  | "Red and Blue Edition"
+  | "White and Blue Edition"
+  | "Vintage Edition"
+  | "Albino Edition"
+  | "Frankenstein Edition"
+  | "Standard Edition";
+
 export interface Locomotives {
   id: number;
   title: string;
   price: string;
   bestseller: boolean;
-  version: MultiLangText;
-  subcat: string;
+  type: ProductType;
+  version?: ProductVersion;
+  status?: ProductStatus;
+  edition: LocomotiveEdition;
   img: string;
   gallery: string[];
   fullDesc: MultiLangText;
 }
+
 
 export const fullDescStandard = {
       id: `Keterangan Lokomotif:
@@ -511,12 +528,9 @@ export const Locomotivess: Locomotives[] = [
     title: "BB 203 78 01",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2037801.png",
     gallery: [
       "/locomotives/2037801.png"
@@ -528,12 +542,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 04 02",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Red and Blue Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Red and Blue Edition",
     img: "/locomotives/2010402.jpg",
     gallery: [
       "/locomotives/2010402.jpg",
@@ -547,12 +558,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 04 03R",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Red and Blue Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Red and Blue Edition",
     img: "/locomotives/2010403.jpg",
     gallery: [
       "/locomotives/2010403.jpg",
@@ -566,12 +574,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 83 51",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Red and Blue Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Red and Blue Edition",
     img: "/locomotives/2018351.jpg",
     gallery: [
       "/locomotives/2018351.jpg",
@@ -586,12 +591,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 83 55",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Red and Blue Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Red and Blue Edition",
     img: "/locomotives/2018355.jpg",
     gallery: [
       "/locomotives/2018355.jpg",
@@ -606,12 +608,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 83 07",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2018307.jpg",
     gallery: [
       "/locomotives/2018307.jpg",
@@ -625,12 +624,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 77 17",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Vintage Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Vintage Edition",
     img: "/locomotives/2017717.png",
     gallery: [
       "/locomotives/2017717.png",
@@ -645,12 +641,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 83 31",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Vintage Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Vintage Edition",
     img: "/locomotives/2018331.png",
     gallery: [
       "/locomotives/2018331.png",
@@ -667,12 +660,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 83 34",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Vintage Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Vintage Edition",
     img: "/locomotives/2018334.png",
     gallery: [
       "/locomotives/2018334.png",
@@ -687,12 +677,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 92 06",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Albino Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Albino Edition",
     img: "/locomotives/2019206.png",
     gallery: [
       "/locomotives/2019206.png",
@@ -708,12 +695,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 92 01",
     price: "IDR 50.000",
     bestseller: true,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Vintage Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Vintage Edition",
     img: "/locomotives/2019201.png",
     gallery: [
       "/locomotives/2019201.png",
@@ -729,12 +713,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 92 12",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2019212.png",
     gallery: [
       "/locomotives/2019212.png",
@@ -748,12 +729,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 92 15",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2019215.png",
     gallery: [
       "/locomotives/2019215.png",
@@ -767,12 +745,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 92 20",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2019220.png",
     gallery: [
       "/locomotives/2019220.png",
@@ -786,12 +761,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 83 48",
     price: "IDR 50.000",
     bestseller: true,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Red and Blue Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Red and Blue Edition",
     img: "/locomotives/2018348.png",
     gallery: [
       "/locomotives/2018348.png",
@@ -807,12 +779,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 203 95 01",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2039501.png",
     gallery: [
       "/locomotives/2039501.png",
@@ -827,12 +796,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 203 98 18",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2039818.png",
     gallery: [
       "/locomotives/2039818.png",
@@ -847,12 +813,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 203 01 07",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2030107.png",
     gallery: [
       "/locomotives/2030107.png",
@@ -867,12 +830,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 203 02 03",
     price: "IDR 50.000",
     bestseller: true,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "White and Blue Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "White and Blue Edition",
     img: "/locomotives/2030203-5.jpg",
     gallery: [
       "/locomotives/2030203.png",
@@ -892,12 +852,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 204 03 01",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2040301.png",
     gallery: [
       "/locomotives/2040301.png",
@@ -913,12 +870,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 204 03 03",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2040303.png",
     gallery: [
       "/locomotives/2040303.png",
@@ -934,12 +888,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 204 03 04",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2040304.png",
     gallery: [
       "/locomotives/2040304.png",
@@ -955,12 +906,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 204 03 06",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "Standard Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "Standard Edition",
     img: "/locomotives/2040306.png",
     gallery: [
       "/locomotives/2040306.png",
@@ -975,12 +923,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 204 11 03",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "White and Blue Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "White and Blue Edition",
     img: "/locomotives/2041103.png",
     gallery: [
       "/locomotives/2041103.png",
@@ -999,12 +944,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 204 11 08",
     price: "IDR 50.000",
     bestseller: false,
-    version: {
-      id: "Versi 1.0",
-      en: "Version 1.0",
-      ko: "버전 1.0"
-    },
-    subcat: "White and Blue Edition",
+    type: "standalone",
+    version: "V.1",
+    edition: "White and Blue Edition",
     img: "/locomotives/2041108.png",
     gallery: [
       "/locomotives/2041108.png",
@@ -1023,12 +965,9 @@ export const Locomotivess: Locomotives[] = [
     title: "CC 201 89 16",
     price: "IDR 70.000",
     bestseller: true,
-    version: {
-      id: "🔥 Versi 2.0",
-      en: "🔥 Version 2.0",
-      ko: "🔥 버전 2.0"
-    },
-    subcat: "Frankenstein Edition",
+    type: "standalone",
+    version: "V.2",
+    edition: "Frankenstein Edition",
     img: "/locomotives/2018916-1.jpg",
     gallery: [
       "/locomotives/2018916-1.jpg",
@@ -1046,6 +985,983 @@ export const Locomotivess: Locomotives[] = [
       "/locomotives/2018916-13.jpg",
     ],
     fullDesc: fullDescVersion2,
+  },
+
+
+
+
+
+  {
+    id: 95,
+    title: "CC 201 Batch 3",
+    price: "IDR 50.000",
+    bestseller: true,
+    type: "all-in-one",
+    version: "V.1",
+    status: "final",
+    edition: "All-in-One Edition",
+    img: "/allinone/c1b3-5.jpg",
+    gallery: [
+          "/allinone/c1b3-1.jpeg",
+          "/allinone/c1b3-2.jpeg",
+          "/allinone/c1b3-3.jpeg",
+          "/allinone/c1b3-4.jpeg",
+          "/allinone/c1b3-5.jpg",
+          "/allinone/c1b3-6.jpg",
+          "/allinone/c1b3-7.jpg",
+          "/allinone/c1b3-8.jpg",
+          "/allinone/c1b3-9.jpg",
+          "/allinone/c1b3-10.jpg",
+          "/allinone/c1b3-11.jpeg",
+          "/allinone/c1b3-12.jpeg",
+          "/allinone/c1b3-13.jpg",
+    ],
+    fullDesc: {
+      id: `Fitur :
+          (+) High Exterior Details
+          (+) Kabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Efek Guncangan saat berjalan
+
+          Script (via Surveyor) :
+          (+) Pasang AC
+          (+) Pasang Kotak Multiple Unit (MU Box)
+          (+) Pasang Teralis
+          (+) Pasang Wiper Kaca Tengah
+          (+) Ganti Livery (tersedia 17 pilihan)
+          (+) Ganti Warna Bogie (tersedia 5 pilihan)
+          (+) Ganti Warna Teralis (tersedia 3 pilihan)
+          (+) Ganti Warna Cow Catcher (tersedia 2 pilihan)
+          (+) Ganti Warna Deckplat
+          (+) Ganti Plat Nomor (tersedia penomoran lama dan baru)
+          (+) Ganti Cap Dipo Induk
+          (+) Ganti Cow Cathcer (Sekop dan Biasa)
+
+          Script (via Driver) :
+          (+) Animasi Semboyan Segitiga (dekat lampu utama)
+          (+) Animasi Pintu Kabin
+          (+) Animasi Jendela Kabin
+          (+) Animasi Teralis Kabin
+          (+) Animasi Wiper
+          (+) Lampu Kabut (terpisah dari lampu utama)
+          (+) Lampu Semboyan
+          (+) Rantai dan Selang ABAR (sambung/lepas)
+          (+) Papan Semboyan 21 Siang
+
+          (-) Bug pada kaca kabin, sehingga tidak dapat melihat corona pada sinyal, dsb. Agar bisa melihat corona sinyal, silahkan hilangkan kaca kabin menggunakan script.
+
+          Keterangan Dependencies :
+          (+) Bogie milik DCP
+          (+) Engine Sound milik IVRD
+          (+) Horn Sound milik IVRD
+
+          Bisa digunakan untuk Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          Lokomotif ini sudah versi final, tidak ada update.
+          `,
+      en: `Features:
+          (+) High Exterior Details
+          (+) Cabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Shock Effects when Driving
+
+          Script (via Surveyor):
+          (+) Install AC
+          (+) Install Multiple Unit Box (MU Box)
+          (+) Install Trellis
+          (+) Install Center Windshield Wiper
+          (+) Change Livery (17 options available)
+          (+) Change Bogie Color (5 options available)
+          (+) Change Trellis Color (3 options available)
+          (+) Change Cow Catcher Color (2 options available)
+          (+) Change Deckplate Color
+          (+) Change License Plate (old and new numbering available)
+          (+) Change Main Depot Stamp
+          (+) Change Cow Catcher (Spade and Regular)
+
+          Script (via Driver):
+          (+) Triangle Motto Animation (near the headlights)
+          (+) Cabin Door Animation
+          (+) Window Animation Cabin
+          (+) Cabin Trellis Animation
+          (+) Wiper Animation
+          (+) Fog Lights (separate from the main lights)
+          (+) Slogan Lights
+          (+) ABAR Chain and Hose (connect/disconnect)
+          (+) 21 Siang Slogan Board
+
+          (-) A bug with the cabin window prevents you from seeing the corona on signals, etc. To see the corona on signals, please remove the cabin window using a script.
+
+          Dependencies Description:
+          (+) Bogie owned by DCP
+          (+) Engine Sound owned by IVRD
+          (+) Horn Sound owned by IVRD
+
+          Can be used with Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          This locomotive is the final version, no updates are available.
+          `,
+      ko: `특징:
+          (+) 뛰어난 외관 디테일
+          (+) 객실 내부
+          (+) 고화질 보기
+          (+) 고화질 연결기
+          (+) 주행 시 충격 효과
+
+          스크립트(Surveyor 이용):
+          (+) 에어컨 설치
+          (+) 다중 유닛 박스(MU 박스) 설치
+          (+) 트렐리스 설치
+          (+) 중앙 와이퍼 설치
+          (+) 도색 변경 (17가지 옵션)
+          (+) 보기 색상 변경 (5가지 옵션)
+          (+) 트렐리스 색상 변경 (3가지 옵션)
+          (+) 소 방지 장치 색상 변경 (2가지 옵션)
+          (+) 데크 플레이트 색상 변경
+          (+) 번호판 변경 (구형 및 신형 번호 사용 가능)
+          (+) 차량기지 스탬프 변경
+          (+) 소 방지 장치 변경 (삽형 및 일반형)
+
+          스크립트(Driver 이용):
+          (+) 삼각형 모토 애니메이션 (헤드라이트 근처)
+          (+) 객실 문 애니메이션
+          (+) 객실 창문 애니메이션
+          (+) 객실 트렐리스 애니메이션
+          (+) 와이퍼 애니메이션
+          (+) 안개등 (주등과 별도 작동)
+          (+) 슬로건 조명
+          (+) ABAR 체인 및 호스 (연결/분리)
+          (+) 21 Siang 슬로건 안내판
+
+          (-) 운전실 창문 버그로 인해 신호등 등의 코로나 효과를 볼 수 없습니다. 신호등 코로나 효과를 보려면 스크립트를 사용하여 운전실 창문을 제거하십시오.
+
+          필수 구성 요소:
+          (+) 보기(Bogie) - DCP 제작
+          (+) 엔진 사운드 - IVRD 제작
+          (+) 경적 사운드 - IVRD 제작
+
+          Trainz Android, TS12HF4, T:ANE, TRS19, TRS22에서 사용 가능
+          이 기관차는 최종 버전이며, 더 이상 업데이트가 제공되지 않습니다.
+          `,
+    },
+  },
+  {
+    id: 96,
+    title: "CC 201 Aerodinamis",
+    price: "IDR 50.000",
+    bestseller: false,
+    type: "all-in-one",
+    version: "V.1",
+    status: "final",
+    edition: "All-in-One Edition",
+    img: "/allinone/c1aero-15.jpg",
+    gallery: [
+        "/allinone/c1aero-20.jpeg",
+        "/allinone/c1aero-1.jpeg",
+        "/allinone/c1aero-2.jpeg",
+        "/allinone/c1aero-3.jpeg",
+        "/allinone/c1aero-4.jpeg",
+        "/allinone/c1aero-5.jpeg",
+        "/allinone/c1aero-6.jpeg",
+        "/allinone/c1aero-7.jpeg",
+        "/allinone/c1aero-8.jpeg",
+        "/allinone/c1aero-9.jpeg",
+        "/allinone/c1aero-10.jpeg",
+        "/allinone/c1aero-11.jpeg",
+        "/allinone/c1aero-12.jpeg",
+        "/allinone/c1aero-13.jpeg",
+        "/allinone/c1aero-14.jpeg",
+        "/allinone/c1aero-15.jpg",
+        "/allinone/c1aero-16.jpg",
+        "/allinone/c1aero-17.jpeg",
+        "/allinone/c1aero-18.jpeg",
+        "/allinone/c1aero-19.jpeg",
+    ],
+    fullDesc: {
+      id: `Fitur :
+          (+) High Exterior Details
+          (+) Kabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Efek Guncangan saat berjalan
+
+          Script (via Surveyor) :
+          (+) Ganti Plat Nomor (tersedia penomoran lama dan baru)
+          (+) Ganti Cap Depo Induk
+          (+) Ganti Model Spion
+          (+) Ganti Model Ventilasi (bawah kaca)
+          (+) Ganti Model Handrail Kabin (bawah kaca)
+          (+) Ganti Model Lampu Kabut
+          (+) Ganti Model Talang Pintu
+          (+) Ganti Model Kaca Depan (Kaca Kecil dan Kaca Normal)
+          (+) Ganti Model Atap
+          (+) Ganti Model Antena
+          (+) Ganti Model Suling
+          (+) Ganti Model Grill
+          (+) Ganti Model Deckplat
+          (+) Ganti Model Cow Catcher
+          (+) Ganti Warna Cow Catcher
+          (+) Ganti Warna Teralis Mesin
+          (+) Pasang Teralis Kabin
+          (+) Pasang Teralis Lampu Semboyan
+          (+) Pasang Lonceng
+          (+) Pasang Stopblok
+          ​(+) Pasang Hanger Mesin
+          (+) Ganti Livery Lokomotif
+
+          Script (via Driver) :
+          (+) Nyala Mati Mesin (BETA)
+          (+) Nyala Mati Lampu Kabin
+          (+) Nyala Mati Lampu Kabut (terpisah dari lampu utama)
+          (+) Nyala Mati Lampu Semboyan
+          (+) Animasi Semboyan 26 27 Siang
+          (+) Animasi Kran Multiple Unit pada Kabin
+          (+) Animasi Kipas Kabin
+          (+) Animasi Wiper
+          (+) Animasi Pintu
+          (+) Animasi Jendela
+          (+) Animasi Teralis
+          (+) Animasi Spion
+          (+) Pasang Lepas Semboyan 21 Siang
+          (+) Pasang Lepas Rantai
+          (+) Pasang Lepas Selang ABAR
+          (+) Pasang Lepas Selang Angin Multiple Unit
+          (+) Pasang Lepas Kabel Multiple Unit
+          (+) Pasang Lepas Stopblok
+          (+) Ganti Model Radio
+          (+) Ganti Model Tempat Jadwal
+
+          (-) Bug pada kaca kabin, sehingga tidak dapat melihat corona pada sinyal, dsb. Agar bisa melihat corona sinyal, silahkan hilangkan kaca kabin menggunakan script.
+
+          Keterangan Dependencies :
+          (+) Bogie milik DCP
+          (+) Engine Sound milik IVRD
+          (+) Horn Sound milik IVRD
+
+          Bisa digunakan untuk Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          Lokomotif ini sudah versi final, tidak ada update.
+          `,
+      en: `Features:
+          (+) High Exterior Details
+          (+) Cabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Shock Effects when Driving
+
+          Script (via Surveyor):
+          (+) Change License Plate (old and new numbering available)
+          (+) Change Main Depot Stamp
+          (+) Change Mirror Model
+          (+) Change Ventilation Model (under glass)
+          (+) Change Cabin Handrail Model (under glass)
+          (+) Change Fog Lamp Model
+          (+) Change Door Gutter Model
+          (+) Change Windshield Model (Small Glass and Normal Glass)
+          (+) Change Roof Model
+          (+) Change Antenna Model
+          (+) Change Flute Model
+          (+) Change Grill Model
+          (+) Change Deckplate Model
+          (+) Change Cow Catcher Model
+          (+) Change Cow Catcher Color
+          (+) Change Engine Grille Color
+          (+) Install Cabin Grille
+          (+) Install Signature Light Grille
+          (+) Install Bell
+          (+) Install a Stop Block
+          ​(+) Install an Engine Hanger
+          (+) Change Locomotive Livery
+
+          Script (via Driver):
+          (+) Engine On/Off (BETA)
+          (+) Cabin Lights On/Off
+          (+) Fog Lights On/Off (separate from main lights)
+          (+) Motto Lights On/Off
+          (+) 26/27 Noon Motto Animation
+          (+) Multiple Unit Cabin Faucet Animation
+          (+) Cabin Fan Animation
+          (+) Wiper Animation
+          (+) Door Animation
+          (+) Window Animation
+          (+) Grille Animation
+          (+) Mirror Animation
+          (+) Install/Remove the 21 Noon Motto
+          (+) Install/Remove the Chain
+          (+) Install/Remove the ABAR Hose
+          (+) Install/Remove the Multiple Unit Air Hose
+          (+) Install/Remove the Multiple Unit Cable
+          (+) Install/Remove the Stop Block
+          (+) Change the Radio Model
+          (+) Change the Schedule Place Model
+
+          (-) Bug on the cabin window, preventing the corona from being visible signals, etc. To see the corona signal, please remove the cabin window using a script.
+
+          Dependencies Description:
+          (+) Bogie owned by DCP
+          (+) Engine Sound owned by IVRD
+          (+) Horn Sound owned by IVRD
+
+          Can be used with Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          This locomotive is the final version, no updates are available.
+          `,
+      ko: `특징:
+          (+) 뛰어난 외관 디테일
+          (+) 운전실 내부
+          (+) 고화질 보기
+          (+) 고화질 연결기
+          (+) 주행 시 충격 효과
+
+          스크립트(Surveyor 사용):
+          (+) 번호판 변경 (구형 및 신형 번호 사용 가능)
+          (+) 차량기지 스탬프 변경
+          (+) 사이드미러 모델 변경
+          (+) 환풍구 모델 변경 (유리 아래)
+          (+) 운전실 난간 모델 변경 (유리 아래)
+          (+) 안개등 모델 변경
+          (+) 도어 홈 모델 변경
+          (+) 앞유리 모델 변경 (소형 유리 및 일반 유리)
+          (+) 지붕 모델 변경
+          (+) 안테나 모델 변경
+          (+) 플루트 모델 변경
+          (+) 그릴 모델 변경
+          (+) 데크 플레이트 모델 변경
+          (+) 소 방지 장치 모델 변경
+          (+) 소 방지 장치 색상 변경
+          (+) 엔진 그릴 색상 변경
+          (+) 운전실 그릴 설치
+          (+) 시그니처 라이트 그릴 설치
+          (+) 경종 설치
+          (+) 정지 블록 설치
+          (+) 엔진 격납고 설치
+          (+) 기관차 도색 변경
+
+          스크립트(Driver 사용):
+          (+) 엔진 켜기/끄기 (베타)
+          (+) 운전실 조명 켜기/끄기
+          (+) 안개등 켜기/끄기 (주 안개등과 별도 작동) 조명)
+          (+) 모토 조명 켜기/끄기
+          (+) 정오 26/27시 모토 애니메이션
+          (+) 다중 유닛 객실 수도꼭지 애니메이션
+          (+) 객실 팬 애니메이션
+          (+) 와이퍼 애니메이션
+          (+) 문 애니메이션
+          (+) 창문 애니메이션
+          (+) 그릴 애니메이션
+          (+) 거울 애니메이션
+          (+) 정오 21시 모토 설치/제거
+          (+) 체인 설치/제거
+          (+) ABAR 호스 설치/제거
+          (+) 다중 유닛 에어 호스 설치/제거
+          (+) 다중 유닛 케이블 설치/제거
+          (+) 정지 블록 설치/제거
+          (+) 라디오 모델 변경
+          (+) 스케줄 위치 모델 변경
+
+          (-) 객실 창문에 버그가 있어 코로나 신호 등이 보이지 않습니다. 코로나 신호를 보려면 스크립트를 사용하여 객실 창문을 제거하십시오.
+
+          필수 구성 요소 설명:
+          (+) 보기(Bogie) - DCP 제작
+          (+) 엔진 사운드 - IVRD 제작
+          (+) 경적 사운드 - IVRD 제작
+
+          Trainz Android, TS12HF4, T:ANE, TRS19, TRS22와 호환 가능
+          이 기관차는 최종 버전이며, 더 이상 업데이트가 제공되지 않습니다.
+          `,
+    },
+  },
+  {
+    id: 97,
+    title: "CC 203 All-in-One",
+    price: "IDR 50.000",
+    bestseller: true,
+    type: "all-in-one",
+    version: "V.1",
+    status: "final",
+    edition: "All-in-One Edition",
+    img: "/allinone/c3aio-6.png",
+    gallery: [
+        "/allinone/c3aio-1.jpg",
+        "/allinone/c3aio-2.png",
+        "/allinone/c3aio-3.png",
+        "/allinone/c3aio-4.png",
+        "/allinone/c3aio-5.png",
+        "/allinone/c3aio-6.png",
+        "/allinone/c3aio-7.png",
+        "/allinone/c3aio-8.png",
+        "/allinone/c3aio-9.png",
+        "/allinone/c3aio-10.png",
+        "/allinone/c3aio-11.png",
+        "/allinone/c3aio-12.png",
+        "/allinone/c3aio-13.png",
+        "/allinone/c3aio-14.png",
+        "/allinone/c3aio-15.png",
+        "/allinone/c3aio-16.png",
+        "/allinone/c3aio-17.jpg",
+        "/allinone/c3aio-18.jpg",
+        "/allinone/c3aio-19.jpg",
+        "/allinone/c3aio-20.jpg",
+        "/allinone/c3aio-21.jpg",
+        "/allinone/c3aio-22.jpg",
+        "/allinone/c3aio-23.jpg",
+        "/allinone/c3aio-24.jpg",
+        "/allinone/c3aio-25.jpg",
+        "/allinone/c3aio-26.jpg",
+        "/allinone/c3aio-27.jpg",
+        "/allinone/c3aio-28.jpg",
+        "/allinone/c3aio-29.jpg",
+        "/allinone/c3aio-30.jpeg",
+        "/allinone/c3aio-31.jpeg",
+    ],
+    fullDesc: {
+      id: `Fitur :
+          (+) High Exterior Details
+          (+) Kabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Efek Guncangan saat berjalan
+
+          Script (via Surveyor) :
+          (+) Ganti Plat Nomor (tersedia penomoran lama dan baru)
+          (+) Ganti Cap Depo Induk
+          (+) Ganti Model Atap (AC)
+          (+) Ganti Model Kabin
+          (+) Ganti Model Jendela
+          (+) Ganti Model Spion
+          (+) Ganti Model Ventilasi (bawah kaca)
+          (+) Ganti Model Handrail Kabin (bawah kaca)
+          (+) Ganti Model Lampu Kabut
+          (+) Ganti Model Talang Pintu
+          (+) Ganti Model Antena
+          (+) Ganti Model Tangga
+          (+) Ganti Model Grill
+          (+) Ganti Model Deckplat
+          (+) Ganti Model Cow Catcher
+          (+) Ganti Warna Cow Catcher
+          (+) Pasang Teralis
+          (+) Pasang Lonceng
+          (+) Pasang Stopblok
+          (+) Ganti Livery Lokomotif
+
+          Script (via Driver) :
+          (+) Nyala Mati Mesin (BETA)
+          (+) Nyala Mati Lampu Kabin
+          (+) Nyala Mati Lampu Kabut (terpisah dari lampu utama)
+          (+) Nyala Mati Lampu Semboyan
+          (+) Animasi Semboyan 26 27 Siang
+          (+) Animasi Kran Multiple Unit pada Kabin
+          (+) Animasi Kipas AC
+          (+) Animasi Wiper
+          (+) Animasi Pintu
+          (+) Animasi Jendela
+          (+) Animasi Teralis
+          (+) Animasi Spion
+          (+) Pasang Lepas Semboyan 21 Siang
+          (+) Pasang Lepas Rantai
+          (+) Pasang Lepas Selang ABAR
+          (+) Pasang Lepas Selang Angin Multiple Unit
+          (+) Pasang Lepas Kabel Multiple Unit
+          (+) Pasang Lepas Stopblok
+          (+) Ganti Model Radio
+          (+) Ganti Model Tempat Jadwal
+
+          (-) Bug pada kaca kabin, sehingga tidak dapat melihat corona pada sinyal, dsb. Agar bisa melihat corona sinyal, silahkan hilangkan kaca kabin menggunakan script.
+
+          Keterangan Dependencies :
+          (+) Bogie milik DCP
+          (+) Engine Sound milik IVRD
+          (+) Horn Sound milik IVRD
+
+          Bisa digunakan untuk Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          Lokomotif ini sudah versi final, tidak ada update.
+          `,
+      en: `Features:
+          (+) High Exterior Details
+          (+) Cabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Shock Effects when Driving
+
+          Script (via Surveyor):
+          (+) Change License Plate (old and new numbering available)
+          (+) Change Main Depot Stamp
+          (+) Change Roof Model (AC)
+          (+) Change Cabin Model
+          (+) Change Window Model
+          (+) Change Mirror Model
+          (+) Change Ventilation Model (under glass)
+          (+) Change Cabin Handrail Model (under glass)
+          (+) Change Fog Lamp Model
+          (+) Change Door Gutter Model
+          (+) Change Antenna Model
+          (+) Change Stair Model
+          (+) Change Grill Model
+          (+) Change Deckplate Model
+          (+) Change Cow Catcher Model
+          (+) Change Cow Catcher Color
+          (+) Install Trellis
+          (+) Install Bell
+          (+) Install Stop Block
+          (+) Change Locomotive Livery
+
+          Script (via Driver) :
+          (+) Engine On/Off (BETA)
+          (+) Cabin Lights On/Off
+          (+) Fog Lights On/Off (separate from headlights)
+          (+) Slogan Lights On/Off
+          (+) Animation of Slogan 26/27 Noon
+          (+) Animation of Multiple Cabin Units with Valves
+          (+) AC Fan Animation
+          (+) Wiper Animation
+          (+) Door Animation
+          (+) Window Animation
+          (+) Grille Animation
+          (+) Mirror Animation
+          (+) Install/Remove Slogan 21 Noon
+          (+) Install/Remove Chain
+          (+) Install/Remove ABAR Hose
+          (+) Install/Remove Air Hose on Multiple Units
+          (+) Install/Remove Cable on Multiple Units
+          (+) Install/Remove Stop Block
+          (+) Change Radio Model
+          (+) Change Schedule Location Model
+
+          (-) Bug on the cabin window, preventing you from seeing corona on the signal, etc. To see the corona on the signal, please remove the cabin window using a script.
+
+          Dependencies Description:
+          (+) Bogie owned by DCP
+          (+) Engine Sound owned by IVRD
+          (+) Horn Sound owned by IVRD
+
+          Can be used with Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          This locomotive is the final version, no updates are available.
+          `, 
+      ko: `특징:
+          (+) 뛰어난 외관 디테일
+          (+) 객실 내부
+          (+) 고화질 보기
+          (+) 고화질 연결기
+          (+) 주행 시 충격 효과
+
+          스크립트(Surveyor 사용):
+          (+) 번호판 변경 (구형 및 신형 번호 사용 가능)
+          (+) 차량기지 스탬프 변경
+          (+) 지붕 모델 변경 (에어컨)
+          (+) 객실 모델 변경
+          (+) 창문 모델 변경
+          (+) 거울 모델 변경
+          (+) 환기구 모델 변경 (유리 아래)
+          (+) 객실 난간 모델 변경 (유리 아래)
+          (+) 안개등 모델 변경
+          (+) 도어 홈 모델 변경
+          (+) 안테나 모델 변경
+          (+) 계단 모델 변경
+          (+) 그릴 모델 변경
+          (+) 데크 플레이트 모델 변경
+          (+) 소 방지 장치 모델 변경
+          (+) 소 방지 장치 색상 변경
+          (+) 격자 설치
+          (+) 종 설치
+          (+) 정지 블록 설치
+          (+) 기관차 도색 변경
+
+          스크립트(Driver 사용):
+          (+) 엔진 켜기/끄기 (베타)
+          (+) 객실 조명 켜기/끄기
+          (+) 안개등 켜기/끄기 (전조등과 별도)
+          (+) 슬로건 조명 켜기/끄기
+          (+) 슬로건 26/27 애니메이션 정오
+          (+) 밸브가 있는 여러 객실 유닛 애니메이션
+          (+) 에어컨 팬 애니메이션
+          (+) 와이퍼 애니메이션
+          (+) 문 애니메이션
+          (+) 창문 애니메이션
+          (+) 그릴 애니메이션
+          (+) 거울 애니메이션
+          (+) 슬로건 '21 정오' 설치/제거
+          (+) 체인 설치/제거
+          (+) ABAR 호스 설치/제거
+          (+) 여러 유닛에 공기 호스 설치/제거
+          (+) 여러 유닛에 케이블 설치/제거
+          (+) 정지 블록 설치/제거
+          (+) 라디오 모델 변경
+          (+) 운행 시간표 위치 모델 변경
+
+          (-) 객실 창문에 버그가 있어 신호등의 코로나 현상 등을 볼 수 없습니다. 신호등의 코로나 현상을 보려면 스크립트를 사용하여 객실 창문을 제거하십시오.
+
+          종속성 설명:
+          (+) 보기(Bogie) - DCP 소유
+          (+) 엔진 사운드 - IVRD 소유
+          (+) 경적 사운드 - IVRD 소유
+
+          Trainz Android, TS12HF4, T:ANE, TRS19, TRS22에서 사용 가능
+          이 기관차는 최종 버전이며, 더 이상 업데이트가 제공되지 않습니다.
+          `,
+    },
+  },
+  {
+    id: 98,
+    title: "CC 204 Batch 1",
+    price: "IDR 50.000",
+    bestseller: false,
+    type: "all-in-one",
+    version: "V.1",
+    status: "final",
+    edition: "All-in-One Edition",
+    img: "/allinone/c4b1-5.jpeg",
+    gallery: [
+        "/allinone/c4b1-1.jpeg",
+        "/allinone/c4b1-2.jpeg",
+        "/allinone/c4b1-3.jpeg",
+        "/allinone/c4b1-4.jpeg",
+        "/allinone/c4b1-5.jpeg",
+        "/allinone/c4b1-6.jpeg",
+        "/allinone/c4b1-7.jpeg",
+        "/allinone/c4b1-8.jpeg",
+        "/allinone/c4b1-9.jpeg",
+        "/allinone/c4b1-10.jpeg",
+        "/allinone/c4b1-11.jpeg",
+        "/allinone/c4b1-12.jpeg",
+        "/allinone/c4b1-13.jpeg",
+        "/allinone/c4b1-14.jpeg",
+        "/allinone/c4b1-15.jpeg",
+        "/allinone/c4b1-16.jpeg",
+    ],
+    fullDesc: {
+      id: `Fitur :
+          (+) High Exterior Details
+          (+) Kabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Efek Guncangan saat berjalan
+
+          Script (via Surveyor) :
+          (+) Pasang Kotak Multiple Unit (MU Box)
+          (+) Pasang Teralis
+          (+) Ganti Livery (tersedia 9 pilihan)
+          (+) Ganti Warna Bogie (tersedia 5 pilihan)
+          (+) Ganti Warna Teralis (tersedia 3 pilihan)
+          (+) Ganti Warna Cow Catcher (tersedia 2 pilihan)
+          (+) Ganti Warna Deckplat
+          (+) Ganti Plat Nomor (tersedia penomoran lama dan baru)
+          (+) Ganti Cap Dipo Induk (tersedia ejaan lama "Dipo" dan ejaan baru "Depo")
+          (+) Ganti Cow Cathcer (Sekop dan Biasa)
+
+          Script (via Driver) :
+          (+) Animasi Semboyan Segitiga (dekat lampu utama)
+          (+) Animasi Pintu Kabin
+          (+) Animasi Jendela Kabin
+          (+) Animasi Teralis Kabin
+          (+) Animasi Wiper
+          (+) Lampu Kabut (terpisah dari lampu utama)
+          (+) Lampu Semboyan
+          (+) Rantai dan Selang ABAR (sambung/lepas)
+          (+) Papan Semboyan 21 Siang
+
+          (-) Bug pada kaca kabin, sehingga tidak dapat melihat corona pada sinyal, dsb. Agar bisa melihat corona sinyal, silahkan hilangkan kaca kabin menggunakan script.
+
+          Keterangan Dependencies :
+          (+) Bogie milik DCP
+          (+) Engine Sound milik IVRD
+          (+) Horn Sound milik IVRD
+
+          Bisa digunakan untuk Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          Lokomotif ini sudah versi final, tidak ada update.
+          `,
+      en: `Features:
+          (+) High Exterior Details
+          (+) Cabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Shock Effects when Driving
+
+          Script (via Surveyor):
+          (+) Install Multiple Unit Boxes (MU Boxes)
+          (+) Install Trellis
+          (+) Change Livery (9 options available)
+          (+) Change Bogie Color (5 options available)
+          (+) Change Trellis Color (3 options available)
+          (+) Change Cow Catcher Color (2 options available)
+          (+) Change Deckplate Color
+          (+) Change License Plate (old and new numbering available)
+          (+) Change Main Depot Stamp (old spelling "Dipo" and new spelling "Depo" available)
+          (+) Change Cow Catcher (Spade and Regular)
+
+          Script (via Driver):
+          (+) Triangle Motto Animation (near the headlights)
+          (+) Cabin Door Animation
+          (+) Window Animation Cabin
+          (+) Cabin Trellis Animation
+          (+) Wiper Animation
+          (+) Fog Lights (separate from the main lights)
+          (+) Slogan Lights
+          (+) ABAR Chain and Hose (connect/disconnect)
+          (+) 21 Siang Slogan Board
+
+          (-) A bug with the cabin window prevents you from seeing the corona on signals, etc. To see the corona on signals, please remove the cabin window using a script.
+
+          Dependencies Description:
+          (+) Bogie owned by DCP
+          (+) Engine Sound owned by IVRD
+          (+) Horn Sound owned by IVRD
+
+          Can be used with Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          This locomotive is the final version, no updates are available.
+          `,
+      ko: `특징:
+          (+) 뛰어난 외부 디테일
+          (+) 객실 내부
+          (+) 고화질 보기
+          (+) 고화질 연결기
+          (+) 주행 시 충격 효과
+
+          스크립트(Surveyor 이용):
+          (+) 다중 유닛 박스(MU 박스) 설치
+          (+) 트렐리스 설치
+          (+) 도색 변경 (9가지 옵션)
+          (+) 보기 색상 변경 (5가지 옵션)
+          (+) 트렐리스 색상 변경 (3가지 옵션)
+          (+) 소 방지 장치 색상 변경 (2가지 옵션)
+          (+) 데크 플레이트 색상 변경
+          (+) 번호판 변경 (구형 및 신형 번호 사용 가능)
+          (+) 차량기지 스탬프 변경 (구형 "Dipo" 및 신형 "Depo" 사용 가능)
+          (+) 소 방지 장치 변경 (삽형 및 일반형)
+
+          스크립트(Driver 이용):
+          (+) 삼각형 모토 애니메이션 (헤드라이트 근처)
+          (+) 객실 문 애니메이션
+          (+) 객실 창문 애니메이션
+          (+) 객실 트렐리스 애니메이션
+          (+) 와이퍼 애니메이션
+          (+) 안개등 (주등과 별도 작동)
+          (+) 슬로건 조명
+          (+) ABAR 체인 및 호스 (연결/분리)
+          (+) 21 Siang 슬로건 안내판
+
+          (-) 운전실 창문 버그로 인해 신호등 등의 코로나 효과가 보이지 않습니다. 신호등 코로나 효과를 보려면 스크립트를 사용하여 운전실 창문을 제거하십시오.
+
+          필수 구성 요소 설명:
+          (+) 보기(Bogie) - DCP 제작
+          (+) 엔진 사운드 - IVRD 제작
+          (+) 경적 사운드 - IVRD 제작
+
+          Trainz Android, TS12HF4, T:ANE, TRS19, TRS22에서 사용 가능
+          이 기관차는 최종 버전이며, 더 이상 업데이트가 제공되지 않습니다.
+          `,
+    },
+  },
+  {
+    id: 99,
+    title: "CC 204 Batch 2",
+    price: "IDR 50.000",
+    bestseller: false,
+    type: "all-in-one",
+    version: "V.1",
+    status: "final",
+    edition: "All-in-One Edition",
+    img: "/allinone/c4b2-15.jpg",
+    gallery: [
+        "/allinone/c4b2-1.jpeg",
+        "/allinone/c4b2-2.jpeg",
+        "/allinone/c4b2-3.jpeg",
+        "/allinone/c4b2-4.jpeg",
+        "/allinone/c4b2-5.jpeg",
+        "/allinone/c4b2-6.jpeg",
+        "/allinone/c4b2-7.jpeg",
+        "/allinone/c4b2-8.jpeg",
+        "/allinone/c4b2-9.jpeg",
+        "/allinone/c4b2-10.jpeg",
+        "/allinone/c4b2-11.jpeg",
+        "/allinone/c4b2-12.jpeg",
+        "/allinone/c4b2-13.jpeg",
+        "/allinone/c4b2-14.jpg",
+        "/allinone/c4b2-15.jpg",
+        "/allinone/c4b2-16.jpeg",
+    ],
+    fullDesc: {
+      id: `Fitur :
+          (+) High Exterior Details
+          (+) Kabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Efek Guncangan saat berjalan
+
+          Script (via Surveyor) :
+          (+) Ganti Plat Nomor (tersedia penomoran lama dan baru)
+          (+) Ganti Cap Depo Induk
+          (+) Ganti Model Spion
+          (+) Ganti Model Ventilasi (bawah kaca)
+          (+) Ganti Model Handrail Kabin (bawah kaca)
+          (+) Ganti Model Lampu Kabut
+          (+) Ganti Model Talang Pintu
+          (+) Ganti Model Antena
+          (+) Ganti Model Suling
+          (+) Ganti Model Grill
+          (+) Ganti Model Deckplat
+          (+) Ganti Model Cow Catcher
+          (+) Ganti Warna Cow Catcher
+          (+) Ganti Warna Teralis Mesin
+          (+) Pasang Teralis
+          (+) Pasang Lonceng
+          (+) Pasang Stopblok
+          ​(+) Pasang Hanger Mesin
+          (+) Pasang Builder Plat
+          (+) Ganti Livery Lokomotif
+
+          Script (via Driver) :
+          (+) Nyala Mati Mesin (BETA)
+          (+) Nyala Mati Lampu Kabin
+          (+) Nyala Mati Lampu Kabut (terpisah dari lampu utama)
+          (+) Nyala Mati Lampu Semboyan
+          (+) Animasi Semboyan 26 27 Siang
+          (+) Animasi Kran Multiple Unit pada Kabin
+          (+) Animasi Kipas Kabin
+          (+) Animasi Wiper
+          (+) Animasi Pintu
+          (+) Animasi Jendela
+          (+) Animasi Teralis
+          (+) Animasi Spion
+          (+) Pasang Lepas Semboyan 21 Siang
+          (+) Pasang Lepas Rantai
+          (+) Pasang Lepas Selang ABAR
+          (+) Pasang Lepas Selang Angin Multiple Unit
+          (+) Pasang Lepas Kabel Multiple Unit
+          (+) Pasang Lepas Stopblok
+          (+) Ganti Model Radio
+          (+) Ganti Model Tempat Jadwal
+
+          (-) Bug pada kaca kabin, sehingga tidak dapat melihat corona pada sinyal, dsb. Agar bisa melihat corona sinyal, silahkan hilangkan kaca kabin menggunakan script.
+
+          Keterangan Dependencies :
+          (+) Bogie milik DCP
+          (+) Engine Sound milik IVRD
+          (+) Horn Sound milik IVRD
+
+          Bisa digunakan untuk Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          Lokomotif ini sudah versi final, tidak ada update.
+          `,
+      en: `Features:
+          (+) High Exterior Details
+          (+) Cabin Interior
+          (+) HD Bogie
+          (+) HD Coupler
+          (+) Shock Effects when Driving
+
+          Script (via Surveyor):
+          (+) Change License Plate (old and new numbering available)
+          (+) Change Main Depot Stamp
+          (+) Change Mirror Model
+          (+) Change Ventilation Model (under glass)
+          (+) Change Cabin Handrail Model (under glass)
+          (+) Change Fog Lamp Model
+          (+) Change Door Gutter Model
+          (+) Change Antenna Model
+          (+) Change Flute Model
+          (+) Change Grill Model
+          (+) Change Deckplate Model
+          (+) Change Cow Catcher Model
+          (+) Change Cow Catcher Color
+          (+) Change Engine Trellis Color
+          (+) Install Trellis
+          (+) Install Bell
+          (+) Install Stop Block
+          ​(+) Install Engine Hanger
+          (+) Install Builder Plate
+          (+) Change Locomotive Livery
+
+          Script (via Driver):
+          (+) Engine On/Off (BETA)
+          (+) Cabin Lights On/Off
+          (+) Fog Lights On/Off (separate from headlights)
+          (+) Slogan Lights On/Off
+          (+) 26/27 Noon Slogan Animation
+          (+) Multiple Unit Cabin Faucet Animation
+          (+) Cabin Fan Animation
+          (+) Wiper Animation
+          (+) Door Animation
+          (+) Window Animation
+          (+) Grille Animation
+          (+) Mirror Animation
+          (+) Install/Remove Slogan 21 Noon
+          (+) Install/Remove Chain
+          (+) Install/Remove ABAR Hose
+          (+) Install/Remove Air Hose on Multiple Units
+          (+) Install/Remove Cable on Multiple Units
+          (+) Install/Remove Stop Block
+          (+) Change Radio Model
+          (+) Change Schedule Location Model
+
+          (-) Bug on the cabin window, preventing you from seeing corona on the signal, etc. To see the corona on the signal, please remove the cabin window using the script.
+
+          Dependencies:
+          (+) DCP Bogie
+          (+) IVRD Engine Sound
+          (+) IVRD Horn Sound
+
+          Can be used with Trainz Android, TS12HF4, T:ANE, TRS19, TRS22
+          This locomotive is the final version, there are no updates.
+          `,
+      ko: `특징:
+          (+) 뛰어난 외관 디테일
+          (+) 객실 내부
+          (+) 고화질 보기
+          (+) 고화질 연결기
+          (+) 주행 시 충격 효과
+
+          스크립트(Surveyor 사용):
+          (+) 번호판 변경 (구형 및 신형 번호 사용 가능)
+          (+) 차량기지 스탬프 변경
+          (+) 사이드미러 모델 변경
+          (+) 환기구 모델 변경 (유리 아래)
+          (+) 객실 난간 모델 변경 (유리 아래)
+          (+) 안개등 모델 변경
+          (+) 도어 홈 모델 변경
+          (+) 안테나 모델 변경
+          (+) 플루트 모델 변경
+          (+) 그릴 모델 변경
+          (+) 데크 플레이트 모델 변경
+          (+) 소 방지 장치 모델 변경
+          (+) 소 방지 장치 색상 변경
+          (+) 엔진 트렐리스 색상 변경
+          (+) 트렐리스 설치
+          (+) 종 설치
+          (+) 정지 블록 설치
+          (+) 엔진 격납고 설치
+          (+) 제작사 명판 설치
+          (+) 기관차 도색 변경
+
+          스크립트(Driver 사용):
+          (+) 엔진 켜기/끄기 (베타)
+          (+) 객실 조명 켜기/끄기
+          (+) 안개등 켜기/끄기 (헤드라이트와 별개)
+          (+) 슬로건 조명 켜기/끄기
+          (+) 정오 26/27시 슬로건 애니메이션
+          (+) 다중 유닛 객실 수도꼭지 애니메이션
+          (+) 객실 팬 애니메이션
+          (+) 와이퍼 애니메이션
+          (+) 도어 애니메이션
+          (+) 창문 애니메이션
+          (+) 그릴 애니메이션
+          (+) 미러 애니메이션
+          (+) 정오 21시 슬로건 설치/제거
+          (+) 체인 설치/제거
+          (+) ABAR 호스 설치/제거
+          (+) 다중 유닛 에어 호스 설치/제거
+          (+) 다중 유닛 케이블 설치/제거
+          (+) 스톱 블록 설치/제거
+          (+) 라디오 모델 변경
+          (+) 스케줄 위치 모델 변경
+
+          (-) 객실 창문에 버그가 있어 신호등의 코로나 현상 등을 볼 수 없습니다. 신호등의 코로나 현상을 보려면 스크립트를 사용하여 객실 창문을 제거하십시오.
+
+          필수 구성 요소:
+          (+) DCP 보기
+          (+) IVRD 엔진 사운드
+          (+) IVRD 경적 사운드
+
+          Trainz Android, TS12HF4, T:ANE, TRS19, TRS22와 호환 가능
+          이 기관차는 최종 버전이며, 더 이상 업데이트는 없습니다.
+          `,
+    },
   }
   
 ];

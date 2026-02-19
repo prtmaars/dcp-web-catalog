@@ -7,8 +7,7 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    const lang = navigator.language.startsWith("id") ? "id" : "en";
-    router.replace(`/${lang}`);
+    router.replace("/id");
   }, [router]);
 
   return (

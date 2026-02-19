@@ -45,7 +45,10 @@ export const translations = {
       edWnb: "Skema Putih dan Biru",
       edRnb: "Skema Merah dan Biru",
       edAlbino: "Skema Albino",
-      edStandard: "Skema Standar"
+      edStandard: "Skema Standar",
+      standaloneV2: "Standalone Edition V.2",
+      standaloneV1: "Standalone Edition V.1",
+      allInOne: "All-in-One Edition",
     },
     rollingstocks: {
       pageTitle: "Kereta",
@@ -137,7 +140,10 @@ export const translations = {
       edWnb: "White and Blue Edition",
       edRnb: "Red and Blue Edition",
       edAlbino: "Albino Edition",
-      edStandard: "Standar Edition"
+      edStandard: "Standar Edition",
+      standaloneV2: "Standalone Edition V.2",
+      standaloneV1: "Standalone Edition V.1",
+      allInOne: "All-in-One Edition",
     },
     rollingstocks: {
       pageTitle: "Rolling Stocks",
@@ -228,7 +234,10 @@ export const translations = {
       edWnb: "화이트 앤 블루 에디션",
       edRnb: "레드 앤 블루 에디션",
       edAlbino: "알비노 에디션",
-      edStandard: "스탠다드 에디션"
+      edStandard: "스탠다드 에디션",
+      standaloneV2: "독립 실행형 버전 2",
+      standaloneV1: "독립 실행형 버전 1",
+      allInOne: "올인원 버전",
     },
     rollingstocks: {
       pageTitle: "열차",
