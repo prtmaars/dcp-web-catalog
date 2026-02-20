@@ -1000,7 +1000,7 @@ export const Locomotivess: Locomotives[] = [
     version: "V.1",
     status: "final",
     edition: "All-in-One Edition",
-    img: "/allinone/c1b3-5.jpg",
+    img: "/allinone/c1b3.jpg",
     gallery: [
           "/allinone/c1b3-1.jpeg",
           "/allinone/c1b3-2.jpeg",
@@ -1154,7 +1154,7 @@ export const Locomotivess: Locomotives[] = [
     version: "V.1",
     status: "final",
     edition: "All-in-One Edition",
-    img: "/allinone/c1aero-15.jpg",
+    img: "/allinone/c1aero.jpg",
     gallery: [
         "/allinone/c1aero-20.jpeg",
         "/allinone/c1aero-1.jpeg",
@@ -1378,7 +1378,7 @@ export const Locomotivess: Locomotives[] = [
     version: "V.1",
     status: "final",
     edition: "All-in-One Edition",
-    img: "/allinone/c3aio-6.png",
+    img: "/allinone/c3aio.jpg",
     gallery: [
         "/allinone/c3aio-1.jpg",
         "/allinone/c3aio-2.png",
@@ -1607,7 +1607,7 @@ export const Locomotivess: Locomotives[] = [
     version: "V.1",
     status: "final",
     edition: "All-in-One Edition",
-    img: "/allinone/c4b1-5.jpeg",
+    img: "/allinone/c4b1.jpg",
     gallery: [
         "/allinone/c4b1-1.jpeg",
         "/allinone/c4b1-2.jpeg",
@@ -1758,7 +1758,7 @@ export const Locomotivess: Locomotives[] = [
     version: "V.1",
     status: "final",
     edition: "All-in-One Edition",
-    img: "/allinone/c4b2-15.jpg",
+    img: "/allinone/c4b2.jpg",
     gallery: [
         "/allinone/c4b2-1.jpeg",
         "/allinone/c4b2-2.jpeg",
