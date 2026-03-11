@@ -21,6 +21,15 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2026/03/12",
+    type: "Update",
+    description: {
+      id: "Penambahan Kereta Modifikasi Ekonomi Kerakyatan pada Ekonomi Pack.",
+      en: "Ekonomi Kerakyatan Modified Train Addition to the Ekonomi Pack.",
+      ko: "Ekonomi Kerakyatan은 Ekonomi Pack에 열차를 수정했습니다.",
+    },
+  },
+  {
     date: "2026/02/26",
     type: "Update",
     description: {

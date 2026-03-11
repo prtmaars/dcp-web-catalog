@@ -487,38 +487,42 @@ export const rollingStocks: RollingStock[] = [
       "/rollingstocks/ekonomi13.jpg",
       "/rollingstocks/ekonomi14.jpg",
       "/rollingstocks/ekonomi15.jpg",
+      "/rollingstocks/ekonomi16.jpg",
     ],
     content: {
       id: `Isi Pack:
-            1. K3 0 09 XX - V1 K
-            2. K3 0 09 XX - V2 K
-            3. K3 0 09 XX - V1 N
-            4. K3 0 09 XX - V2 N
-            5. KMP3 0 09 XX
-            6. K3 0 10 XX - K
-            7. K3 0 10 XX - DIFABEL
-            8. MP3 0 10 XX
-            9. K3 0 10 XX - Modifikasi New Generation`,
+            1. K3 0 07 XX - Ekonomi Kerakyatan
+            2. K3 0 09 XX - V1 K
+            3. K3 0 09 XX - V2 K
+            4. K3 0 09 XX - V1 N
+            5. K3 0 09 XX - V2 N
+            6. KMP3 0 09 XX
+            7. K3 0 10 XX - K
+            8. K3 0 10 XX - DIFABEL
+            9. MP3 0 10 XX
+            10. K3 0 10 XX - Modifikasi New Generation`,
       en: `Pack Contents:
-            1. K3 0 09 XX - V1 K
-            2. K3 0 09 XX - V2 K
-            3. K3 0 09 XX - V1 N
-            4. K3 0 09 XX - V2 N
-            5. KMP3 0 09 XX
-            6. K3 0 10 XX - K
-            7. K3 0 10 XX - DISABLED
-            8. MP3 0 10 XX
-            9. K3 0 10 XX - New Generation Modification`,
+            1. K3 0 07 XX - Ekonomi Kerakyatan
+            2. K3 0 09 XX - V1 K
+            3. K3 0 09 XX - V2 K
+            4. K3 0 09 XX - V1 N
+            5. K3 0 09 XX - V2 N
+            6. KMP3 0 09 XX
+            7. K3 0 10 XX - K
+            8. K3 0 10 XX - DIFABEL
+            9. MP3 0 10 XX
+            10. K3 0 10 XX - New Generation Modification`,
       ko: `패키지 구성품:
-            1. K3 0 09 XX - V1 K
-            2. K3 0 09 XX - V2 K
-            3. K3 0 09 XX - V1 N
-            4. K3 0 09 XX - V2 N
-            5. KMP3 0 09 XX
-            6. K3 0 10 XX - K
-            7. K3 0 10 XX - 디파벨
-            8. MP3 0 10 XX
-            9. K3 0 10 XX - 차세대 개조`,
+            1. K3 0 07 XX - 인민 경제
+            2. K3 0 09 XX - V1 K
+            3. K3 0 09 XX - V2 K
+            4. K3 0 09 XX - V1 N
+            5. K3 0 09 XX - V2 N
+            6. KMP3 0 09 XX
+            7. K3 0 10 XX - K
+            8. K3 0 10 XX - 사용 불가
+            9. MP3 0 10 XX
+            10. K3 0 10 XX - 차세대 수정 버전`,
     },
     fullDesc: fullDescStandard1,
   },
