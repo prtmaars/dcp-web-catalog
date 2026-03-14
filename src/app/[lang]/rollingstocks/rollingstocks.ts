@@ -360,9 +360,9 @@ export const rollingStocks: RollingStock[] = [
             7. K3 0 17 XX
             8. K3 0 17 XX - DIFABEL
             9. MP3 0 17 XX
-            10. K1 0 09 05
-            11. M1 0 08 03
-            12​. M1 0 82 10
+            10. K1 0 09 05 - Modifikasi
+            11. M1 0 08 03 - Modifikasi
+            12​. M1 0 82 10 - Modifikasi
             13. K1 0 16 XX - Livery Fiksi Sindoro-Anggrek
             14. M1 0 16 XX - Livery Fiksi Sindoro-Anggrek
             15. P 0 16 XX - Livery Fiksi Sindoro-Anggrek`,
