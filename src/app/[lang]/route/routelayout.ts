@@ -17,12 +17,19 @@ export interface RouteLayout {
   gallery: string[];
   fullDesc: MultiLangText;
   reviews?: string[];
+  buyLink: string;
 }
+
+const BUY_LINKS = {
+  admin1: "https://wa.me/6281225478563",
+  admin2: "https://wa.me/6289662336927",
+};
 
 export const routelayout: RouteLayout[] = [
   {
     id: 1,
     title: "Cipatat - Sukabumi",
+    buyLink: BUY_LINKS.admin1,
     prices: [
       { platform: "TSA", value: "IDR 80.000" },
       { platform: "TSPC", value: "IDR 100.000" },
@@ -54,6 +61,7 @@ export const routelayout: RouteLayout[] = [
   {
     id: 2,
     title: "Purwakarta - Cibatu",
+    buyLink: BUY_LINKS.admin2,
     prices: [
       { platform: "TSPC", value: "IDR 129.999" },
     ],

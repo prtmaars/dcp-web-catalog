@@ -26,7 +26,7 @@ export default function RoutelayoutPage() {
 
   const handleBuy = (item: RouteLayout) => {
     const msg = encodeURIComponent(`${t.buyMessage} ${item.title}.`);
-    window.open(`https://wa.me/6281225478563?text=${msg}`, "_blank");
+    window.open(`${item.buyLink}?text=${msg}`, "_blank");
   };
 
   const paginatedImages = selected?.gallery?.slice(
