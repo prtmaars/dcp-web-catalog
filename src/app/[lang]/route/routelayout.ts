@@ -22,7 +22,7 @@ export interface RouteLayout {
 export const routelayout: RouteLayout[] = [
   {
     id: 1,
-    title: "Cianjuran",
+    title: "Cipatat - Sukabumi",
     prices: [
       { platform: "TSA", value: "IDR 80.000" },
       { platform: "TSPC", value: "IDR 100.000" },
@@ -50,5 +50,73 @@ export const routelayout: RouteLayout[] = [
       "https://youtu.be/t73eZHv6t3M?si=V_cQkzha72szIEuy",
       "https://youtu.be/FFNtMxG3nqg?si=ttjDuG9aiXvp77uL",
     ],
+  },
+  {
+    id: 2,
+    title: "Purwakarta - Cibatu",
+    prices: [
+      { platform: "TSPC", value: "IDR 129.999" },
+    ],
+    img: "/route/pwkcb13.jpeg",
+    gallery: [
+      "/route/pwkcb01.jpeg",
+      "/route/pwkcb02.jpeg",
+      "/route/pwkcb03.jpeg",
+      "/route/pwkcb04.jpeg",
+      "/route/pwkcb05.jpeg",
+      "/route/pwkcb06.jpeg",
+      "/route/pwkcb07.jpeg",
+      "/route/pwkcb08.jpeg",
+      "/route/pwkcb09.jpeg",
+      "/route/pwkcb10.jpeg",
+      "/route/pwkcb11.jpeg",
+      "/route/pwkcb12.jpeg",
+      "/route/pwkcb13.jpeg",
+      "/route/pwkcb14.jpeg",
+      "/route/pwkcb15.jpeg",
+      "/route/pwkcb16.jpeg",
+      "/route/pwkcb17.jpeg",
+    ],
+    fullDesc: {
+      id: `New Daop 2 Purwakarta - Bandung - Cibatu untuk TRS2019 dan TRS2022
+
+            Dilengkapi:
+            - Dinas KA Serayu 283
+            - Dinas KA Serayu 284
+            - Dinas Lokal Cibatu 349
+
+            Review rute:
+            - Memiliki 30 Stasiun 
+            - Map Khas Daop 2 Bandung
+            - Memiliki Objek stasiun Real
+            - Kontur tanah naik turun 
+            - Support TRS19 dan TRS22`,
+      en: `New Operational Area 2 Purwakarta - Bandung - Cibatu for TRS2019 dan TRS2022
+
+            Equipped with:
+            - Serayu 283 Train Service
+            - Serayu 284 Train Service
+            - Cibatu 349 Local Service
+
+            Route Review:
+            - 30 Stations
+            - Unique Bandung Operational Area 2 Map
+            - Real-time Station Objects
+            - Up and down land contours
+            - Supports TRS19 and TRS22`,
+      ko: `TRS2019 및 TRS2022용 신규 운행 구역 2 푸르와카르타 - 반둥 - 시바투
+
+            지원 열차:
+            - 세라유 283번 열차
+            - 세라유 284번 열차
+            - 시바투 349번 완행 열차
+
+            노선 특징:
+            - 30개 역
+            - 반둥 운행 구역 2 전용 지도
+            - 실시간 역 정보
+            - 고도 및 경사도 표시
+            - TRS19 및 TRS22 지원`,
+    },
   },
 ];
