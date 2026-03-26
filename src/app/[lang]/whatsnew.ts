@@ -21,6 +21,15 @@ export const getDefaultColor = (type: WhatsNewItem["type"]) => {
 
 export const whatsNewData: WhatsNewItem[] = [
   {
+    date: "2026/03/26",
+    type: "New Content",
+    description: {
+      id: "Rilis rute Purwakarta-Cibatu untuk TRS2019 dan TRS2022.",
+      en: "Release of the Purwakarta-Cibatu route for TRS2019 and TRS2022.",
+      ko: "2019년 및 2022년 TRS(철도 운행 횟수)의 푸르와카르타-시바투 노선이 공개되었습니다.",
+    },
+  },
+  {
     date: "2026/03/12",
     type: "Update",
     description: {
