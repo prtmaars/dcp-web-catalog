@@ -73,7 +73,7 @@ export const translations = {
       detailButton: "Rincian",
       buyButton: "Beli",
       closeButton: "Tutup",
-      buyMessage: "Halo admin, Saya ingin membeli addons",
+      buyMessage: "Halo admin, Saya ingin membeli rute",
       reviewButton: "Review",
     },
     tutorial: {
