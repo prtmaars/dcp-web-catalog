@@ -21,17 +21,17 @@ export interface RouteLayout {
 }
 
 const BUY_LINKS = {
-  admin1: "https://wa.me/6281225478563",
-  admin2: "https://wa.me/6289662336927",
+  admin_adhitya: "https://wa.me/6281225478563",
+  admin_padlinka: "https://wa.me/6289662336927",
 };
 
 export const routelayout: RouteLayout[] = [
   {
     id: 1,
     title: "Cipatat - Sukabumi",
-    buyLink: BUY_LINKS.admin1,
+    buyLink: BUY_LINKS.admin_adhitya,
     prices: [
-      { platform: "TSA", value: "IDR 80.000" },
+      { platform: "TSA (Limited)", value: "IDR 80.000" },
       { platform: "TSPC", value: "IDR 100.000" },
     ],
     img: "/route/cj01.jpg",
@@ -61,7 +61,7 @@ export const routelayout: RouteLayout[] = [
   {
     id: 2,
     title: "Purwakarta - Cibatu",
-    buyLink: BUY_LINKS.admin2,
+    buyLink: BUY_LINKS.admin_padlinka,
     prices: [
       { platform: "TSPC", value: "IDR 129.999" },
     ],
@@ -126,5 +126,49 @@ export const routelayout: RouteLayout[] = [
             - 고도 및 경사도 표시
             - TRS19 및 TRS22 지원`,
     },
+  },
+  {
+    id: 3,
+    title: "Bogor - Sukabumi",
+    buyLink: BUY_LINKS.admin_adhitya,
+    prices: [
+      { platform: "TSA (Limited)", value: "IDR 90.000" },
+      { platform: "TSPC", value: "IDR 120.000" },
+    ],
+    img: "/route/boosi01.jpg",
+    gallery: [
+      "/route/boosi01.jpg",
+      "/route/boosi02.jpg",
+      "/route/boosi03.jpg",
+      "/route/boosi04.jpg",
+      "/route/boosi05.jpg",
+      "/route/boosi06.jpg",
+      "/route/boosi07.jpg",
+      "/route/boosi08.jpg",
+      "/route/boosi09.jpg",
+      "/route/boosi20.jpg",
+      "/route/boosi21.jpg",
+      "/route/boosi22.jpg",
+      "/route/boosi23.jpg",
+      "/route/boosi24.jpg",
+      "/route/boosi25.jpg",
+      "/route/boosi26.jpg",
+      "/route/boosi27.jpg",
+      "/route/boosi28.jpg",
+      "/route/boosi29.jpg",
+      "/route/boosi30.jpg",
+      "/route/boosi31.jpg",
+      "/route/boosi32.jpg",
+      "/route/boosi33.jpg",
+    ],
+    fullDesc: {
+      id: `Rute Daop 1 Selatan merupakan rute yang membentang sepanjang 57 km dari Stasiun Bogor hingga Stasiun Sukabumi. Rute ini memperlihatkan lanskap alam yang memukau sepanjang perjalanan, menampilkan pemandangan sawah hijau yang luas, view Sungai Cisadane sepanjang lintas Stasiun Batutulis sampai Stasiun Maseng, perbukitan dan panorama khas alam Jawa Barat. Pembuatan rute ini juga di-support dengan objek basemap yang tentunya jarak dan lika-liku rute ini sudah hampir menyerupai aslinya dan rute ini juga dilengkapi dengan objek stasiun yang sudah menggunakan tekstur real skin serta full RTT, membuat rute ini semakin mirip dengan aslinya.`,
+      en: `The Daop 1 Selatan route is a 57 km route from Bogor Station to Sukabumi Station. This route showcases stunning natural landscapes along the journey, featuring views of vast green rice fields, views of the Cisadane River along the Batutulis Station to Maseng Station, hills and typical West Javanese natural panoramas. The creation of this route is also supported by basemap objects which of course the distance and twists of this route are almost identical to the original and this route is also equipped with station objects that already use real skin textures and full RTT, making this route even more similar to the original.`,
+      ko: `다오프 1 셀라탄 노선은 보고르역에서 수카부미역까지 57km 구간입니다. 이 노선은 광활한 녹색 논밭, 바투툴리스역에서 마셍역까지 이어지는 시사다네 강, 언덕, 그리고 전형적인 서부 자바의 자연 경관 등 아름다운 자연을 만끽할 수 있는 곳입니다. 이 노선은 기본 지도 객체를 기반으로 제작되었으며, 거리와 굴곡은 실제 노선과 거의 동일합니다. 또한, 실제 텍스처와 RTT(Rapid Time Tracking)를 적용한 역 객체들을 사용하여 더욱 실감나는 경험을 제공합니다.`,
+    },
+    reviews: [
+      "https://youtu.be/43uR-299aF0?si=OWIE33ZcDlsJYNSh",
+      "https://youtu.be/_iT7NmXSOb8?si=PebsC-aLpVUHU8RD",
+    ],
   },
 ];
