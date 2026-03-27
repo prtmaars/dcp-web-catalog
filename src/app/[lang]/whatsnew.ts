@@ -39,6 +39,15 @@ export const whatsNewData: WhatsNewItem[] = [
     },
   },
   {
+    date: "2026/03/11",
+    type: "New Content",
+    description: {
+      id: "Rilis rute Bogor-Sukabumi.",
+      en: "Release of the Bogor-Sukabumi route.",
+      ko: "보고르-수카부미 노선 개통.",
+    },
+  },
+  {
     date: "2026/02/26",
     type: "Update",
     description: {
